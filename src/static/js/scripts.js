@@ -23,9 +23,9 @@ $(document).on("click", "input.addDisease", function(){
 	var uri = $(this).parent("li").children("a").attr("href");	
 
 	if (selected[0][0] == uri || selected[1][0] == uri || selected[2][0] == uri) {
-		alert("Already selected");      // There must be a better way than a popup
+		alert("Bạn đã chọn mục này.");      // There must be a better way than a popup
 	} else if (indexd > 2) {
-		alert("You can choose only three options");			
+		alert("Bạn chỉ có thể chọn tối đa 3 mục.");
 	} else { 
 		var li = $('<li></li>');
 		li.addClass("list-group-item");
@@ -97,7 +97,7 @@ $('#inputdisease').on('input', function() {
 				a.text(label);
 				li.append(a);
 
-				li.append("<input type='button' class='btn btn-secondary pull-right addDisease' value='Add' >");		// Button to add the disease 
+				li.append("<input type='button' class='btn btn-secondary pull-right addDisease' value='Chọn' >");		// Button to add the disease
 																											// to the ones we're querying
 				ul.append(li);																				
 			
