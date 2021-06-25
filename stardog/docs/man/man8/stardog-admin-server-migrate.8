@@ -1,0 +1,34 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "STARDOG\-ADMIN_SERVER_MIGRATE" "8" "June 2021" "Stardog Union" "stardog-admin"
+.
+.SH "NAME"
+\fBstardog\-admin_server_migrate\fR \- Migrates the contents of a Stardog home directory from an old version to the current version\.
+.
+.SH "SYNOPSIS"
+\fBstardog\-admin\fR \fBserver\fR \fBmigrate\fR [ {\-v | \-\-verbose} ] [\-\-] \fIold\-stardog\-home\fR \fInew\-stardog\-home\fR\.\.\.
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Flag that can cause more detailed information to be printed such as errors and status\. Exact output depends upon the command and options used\.
+.
+.TP
+\-\-
+This option can be used to separate command\-line options from the list of arguments (useful when arguments might be mistaken for command\-line options)\.
+.
+.TP
+\fIold\-stardog\-home\fR \fInew\-stardog\-home\fR
+Location of the old Stardog home directory followed by the location of new Stardog home directory\.
+.
+.SH "DISCUSSION"
+Migrates the contents of a Stardog home directory from an old version to the current version\. The new home directory should exist and contain nothing but the license file\.Migration is not needed for most version upgrades but sometimes there are backward\-incompatible changes between two versions (e\.g\. from version 6 to version 7) that requires manual migration\. This command migrates the contents of the each database along with the system database that contains users, roles, permissions and other metadata\. The stardog\.properties file will NOT be copied automatically\. Please consult the migration guide in Stardog documentation for any possible changes in the configuration options\.
+.
+.SH "EXAMPLES"
+.
+.TP
+Migrate the home directory from version 6 to version 7
+$ stardog\-admin migrate /data/stardog/home6 /data/stardog/home7
+

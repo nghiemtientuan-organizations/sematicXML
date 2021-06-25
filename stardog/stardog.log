@@ -1,0 +1,1361 @@
+INFO  2021-06-25 22:43:12,297 [main] com.complexible.stardog.plan.cache.SimplePlanCache:clear(137): Clearing 0 cached plans
+INFO  2021-06-25 22:43:12,319 [main] com.complexible.stardog.virtual.DefaultVirtualGraphRegistry:syncCache(494): Initializing virtual graph registry
+INFO  2021-06-25 22:43:12,351 [main] com.complexible.stardog.virtual.DefaultVirtualGraphRegistry:syncCache(518): Loaded virtual graph registry with 0 entries
+INFO  2021-06-25 22:43:14,391 [main] com.complexible.stardog.StardogKernel:start(2393): Initializing Stardog
+
+************************************************************
+This copy of Stardog is licensed to Nghiemthi Hàchi (nghiemthihachi@gmail.com), sun
+This is a Enterprise license
+This license will expire in 364 days on Sat Jun 25 22:07:59 ICT 2022
+************************************************************
+
+                                                             :;   
+                                      ;;                   `;`:   
+  `'+',    ::                        `++                    `;:`  
+ +###++,  ,#+                        `++                    .     
+ ##+.,',  '#+                         ++                     +    
+,##      ####++  ####+:   ##,++` .###+++   .####+    ####++++#    
+`##+     ####+'  ##+#++   ###++``###'+++  `###'+++  ###`,++,:     
+ ####+    ##+        ++.  ##:   ###  `++  ###  `++` ##`  ++:      
+  ###++,  ##+        ++,  ##`   ##;  `++  ##:   ++; ##,  ++:      
+    ;+++  ##+    ####++,  ##`   ##:  `++  ##:   ++' ;##'#++       
+     ;++  ##+   ###  ++,  ##`   ##'  `++  ##;   ++:  ####+        
+,.   +++  ##+   ##:  ++,  ##`   ###  `++  ###  .++  '#;           
+,####++'  +##++ ###+#+++` ##`   :####+++  `####++'  ;####++`      
+`####+;    ##++  ###+,++` ##`    ;###:++   `###+;   `###++++      
+                                                    ##   `++      
+                                                   .##   ;++      
+                                                    #####++`      
+                                                     `;;;.        
+************************************************************
+
+
+Stardog server 7.6.4 started on Fri Jun 25 22:43:15 ICT 2021.
+
+Stardog server is listening on all network interfaces.
+HTTP server available at http://localhost:5820.
+
+WARNING: All security for the Stardog Server has been disabled.
+
+STARDOG=/opt/Protege/projects/FinalProject/stardog/bin/..
+
+STARDOG_HOME=/opt/Protege/projects/FinalProject/stardog/
+
+INFO  2021-06-25 22:43:15,140 [main] com.complexible.stardog.cli.impl.ServerStart:call(263): Memory options
+INFO  2021-06-25 22:43:15,140 [main] com.complexible.stardog.cli.impl.ServerStart:call(264): Memory mode: DEFAULT{Starrocks.block_cache=20, Starrocks.dict_block_cache=10, Native.starrocks=70, Heap.dict_value=50, Starrocks.txn_block_cache=5, Heap.dict_index=50, Starrocks.untracked_memory=20, Starrocks.memtable=40, Starrocks.buffer_pool=5, Native.query=30}
+INFO  2021-06-25 22:43:15,141 [main] com.complexible.stardog.cli.impl.ServerStart:call(265): Min Heap Size: 2.0G
+INFO  2021-06-25 22:43:15,141 [main] com.complexible.stardog.cli.impl.ServerStart:call(266): Max Heap Size: 1.9G
+INFO  2021-06-25 22:43:15,142 [main] com.complexible.stardog.cli.impl.ServerStart:call(267): Max Direct Mem: 1.5G
+INFO  2021-06-25 22:43:15,143 [main] com.complexible.stardog.cli.impl.ServerStart:call(268): System Memory: 7.7G
+WARN  2021-06-25 22:44:31,303 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:32,298 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:32,487 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:32,642 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:32,809 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:33,091 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:33,304 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:33,444 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:33,945 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:34,333 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:35,271 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:35,449 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:35,579 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:35,737 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:35,896 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:36,028 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:36,167 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:36,311 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:44:36,483 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Stardog home is currently locked, cannot start kernel. Multiple instances of Stardog cannot use the same home directory. 
+Shut down the running Stardog server before starting another. The process ID for a running Stardog server is stored in the 
+stardog.pid file under STARDOG_HOME directory. If that file does not exist, you can use standard system tools to find the 
+process holding the lock on /opt/Protege/projects/FinalProject/stardog/system.lock.
+WARN  2021-06-25 22:48:10,181 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:63) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.GraphStoreProtocol.getGraph(GraphStoreProtocol.java:115) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:11,008 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'favicon.ico' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:63) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.GraphStoreProtocol.getGraph(GraphStoreProtocol.java:115) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:43,000 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:63) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.GraphStoreProtocol.getGraph(GraphStoreProtocol.java:115) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:43,845 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:63) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.GraphStoreProtocol.getGraph(GraphStoreProtocol.java:115) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:53,663 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:55,206 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:55,215 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:56,017 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:56,619 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:56,823 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:58,632 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:58,788 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:58,852 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:59,041 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:48:59,140 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:49:01,108 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:49:04,791 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:49:05,925 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:49:28,252 [stardog-user-1] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:49:58,279 [stardog-user-2] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+WARN  2021-06-25 22:52:59,116 [stardog-user-3] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.UnknownDatabaseException: Database 'interdrugs' does not exist.
+	at com.complexible.stardog.server.UnknownDatabaseException.create(UnknownDatabaseException.java:28) ~[stardog-core-shared-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.get(StardogKernel.java:2752) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.assertOnline(StardogKernel.java:2757) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.getConnection(StardogKernel.java:1128) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService$ConnectionOptions.connect(KernelHttpService.java:122) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.KernelHttpService.openConnection(KernelHttpService.java:70) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.executeQuery(SPARQLProtocol.java:206) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.SPARQLProtocol.get(SPARQLProtocol.java:129) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+INFO  2021-06-25 22:54:14,406 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(127): Memory usage 91% - initiating detailed analysis - will check again in 1m
+INFO  2021-06-25 22:54:14,410 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(128): Stardog JVM memory usage
+OSMemory{ virtualSize=4.4G, residentSize=488M, residentSizePeak=499M, regionCount=1, pinnedSize=0B, vmTotal=7.7G, vmAvailable=720M, pageSize=4.0K}
+INFO  2021-06-25 22:54:14,428 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(133): Stardog Metrics
+dbms.memory.blockcache.data.add.count = 0
+dbms.memory.blockcache.data.add.failure.count = 0
+dbms.memory.blockcache.data.cachesIndexBlocks = false
+dbms.memory.blockcache.data.capacity = 182,619,984
+dbms.memory.blockcache.data.hits = 0
+dbms.memory.blockcache.data.iteratorCreated = 0
+dbms.memory.blockcache.data.iteratorDeleted = 0
+dbms.memory.blockcache.data.misses = 0
+dbms.memory.blockcache.data.pinnedUsage = 0
+dbms.memory.blockcache.data.ratio = 0.0
+dbms.memory.blockcache.data.read = 0
+dbms.memory.blockcache.data.strictCapacity = false
+dbms.memory.blockcache.data.usage = 0
+dbms.memory.blockcache.data.written = 0
+dbms.memory.blockcache.dictionary.add.count = 0
+dbms.memory.blockcache.dictionary.add.failure.count = 0
+dbms.memory.blockcache.dictionary.cachesIndexBlocks = true
+dbms.memory.blockcache.dictionary.capacity = 91,309,992
+dbms.memory.blockcache.dictionary.hits = 0
+dbms.memory.blockcache.dictionary.iteratorCreated = 0
+dbms.memory.blockcache.dictionary.iteratorDeleted = 0
+dbms.memory.blockcache.dictionary.misses = 0
+dbms.memory.blockcache.dictionary.pinnedUsage = 0
+dbms.memory.blockcache.dictionary.ratio = 0.0
+dbms.memory.blockcache.dictionary.read = 0
+dbms.memory.blockcache.dictionary.strictCapacity = false
+dbms.memory.blockcache.dictionary.usage = 0
+dbms.memory.blockcache.dictionary.written = 0
+dbms.memory.blockcache.total.capacity = 319,584,972
+dbms.memory.blockcache.total.data.hits = 0
+dbms.memory.blockcache.total.data.misses = 0
+dbms.memory.blockcache.total.data.ratio = 0.0
+dbms.memory.blockcache.total.filter.hits = 0
+dbms.memory.blockcache.total.filter.misses = 0
+dbms.memory.blockcache.total.filter.ratio = 0.0
+dbms.memory.blockcache.total.index.hits = 0
+dbms.memory.blockcache.total.index.misses = 0
+dbms.memory.blockcache.total.index.ratio = 0.0
+dbms.memory.blockcache.total.iteratorCreated = 0
+dbms.memory.blockcache.total.iteratorDeleted = 0
+dbms.memory.blockcache.total.pinnedUsage = 0
+dbms.memory.blockcache.total.usage = 0
+dbms.memory.blockcache.txn.add.count = 0
+dbms.memory.blockcache.txn.add.failure.count = 0
+dbms.memory.blockcache.txn.cachesIndexBlocks = true
+dbms.memory.blockcache.txn.capacity = 45,654,996
+dbms.memory.blockcache.txn.hits = 0
+dbms.memory.blockcache.txn.iteratorCreated = 0
+dbms.memory.blockcache.txn.iteratorDeleted = 0
+dbms.memory.blockcache.txn.misses = 0
+dbms.memory.blockcache.txn.pinnedUsage = 0
+dbms.memory.blockcache.txn.ratio = 0.0
+dbms.memory.blockcache.txn.read = 0
+dbms.memory.blockcache.txn.strictCapacity = false
+dbms.memory.blockcache.txn.usage = 0
+dbms.memory.blockcache.txn.written = 0
+dbms.memory.config.dict_index_cache = 411,670,938
+dbms.memory.config.dict_value_cache = 411,670,938
+dbms.memory.config.query_mem_blocks = 391,328,563
+dbms.memory.config.starrocks_size = 913,099,980
+dbms.memory.direct.buffer.used = 213,004
+dbms.memory.heap.max = 2,058,354,688
+dbms.memory.heap.query.blocks.max = 0
+dbms.memory.heap.query.blocks.used = 0
+dbms.memory.heap.used = 316,667,648
+dbms.memory.management = NATIVE
+dbms.memory.mapped.used = 0
+dbms.memory.mode = DEFAULT{Starrocks.block_cache=20, Starrocks.dict_block_cache=10, Native.starrocks=70, Heap.dict_value=50, Starrocks.txn_block_cache=5, Heap.dict_index=50, Starrocks.untracked_memory=20, Starrocks.memtable=40, Starrocks.buffer_pool=5, Native.query=30}
+dbms.memory.monitor.interval = 60000
+dbms.memory.monitor.report.threshold = 0.9
+dbms.memory.native.max = 1,572,864,000
+dbms.memory.native.query.blocks.max = 391,328,563
+dbms.memory.native.query.blocks.used = 0
+dbms.memory.system.pageSize = 4,096
+dbms.memory.system.pinnedSize = 0
+dbms.memory.system.regionCount = 1
+dbms.memory.system.rss = 511,250,432
+dbms.memory.system.rss.peak = 523,366,400
+dbms.memory.system.usageRatio = 0.9087045055935948
+dbms.memory.system.virtual = 4,671,844,352
+INFO  2021-06-25 22:54:14,429 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(135): System mem
+Total Memory: 8267284480
+Available Memory: 754765824
+INFO  2021-06-25 22:54:14,429 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(136): init = 2.0G used = 302M committed = 1.9G max = 1.9G
+INFO  2021-06-25 22:54:14,441 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(137): 
+DETAILED MEMORY INFO
+Heap Memory Usage: init = 2147483648(2097152K) used = 316667648(309245K) committed = 2058354688(2010112K) max = 2058354688(2010112K)
+Non-Heap Memory Usage: init = 7667712(7488K) used = 72948120(71238K) committed = 76578816(74784K) max = -1(-1K)
+Name: PS MarkSweep
+	Collection count: 2
+	Collection time: 133
+	Memory Pools: [PS Eden Space, PS Survivor Space, PS Old Gen]
+Name: PS Scavenge
+	Collection count: 2
+	Collection time: 22
+	Memory Pools: [PS Eden Space, PS Survivor Space]
+
+Memory Pools Info
+Name: CodeHeap 'non-nmethods'
+	Usage: init = 2555904(2496K) used = 1328512(1297K) committed = 2555904(2496K) max = 5832704(5696K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 1356928(1325K) committed = 2555904(2496K) max = 5832704(5696K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+Name: Metaspace
+	Usage: init = 0(0K) used = 51816360(50601K) committed = 53395456(52144K) max = -1(-1K)
+	Collection Usage: null
+	Peak Usage: init = 0(0K) used = 51816360(50601K) committed = 53395456(52144K) max = -1(-1K)
+	Type: Non-heap memory
+	Memory Manager Names: [Metaspace Manager]
+Name: CodeHeap 'profiled nmethods'
+	Usage: init = 2555904(2496K) used = 10808960(10555K) committed = 10813440(10560K) max = 122912768(120032K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 10808960(10555K) committed = 10813440(10560K) max = 122912768(120032K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+Name: PS Old Gen
+	Usage: init = 1431830528(1398272K) used = 28161688(27501K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Collection Usage: init = 1431830528(1398272K) used = 28161688(27501K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Peak Usage: init = 1431830528(1398272K) used = 28161688(27501K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep]
+Name: Compressed Class Space
+	Usage: init = 0(0K) used = 6637376(6481K) committed = 7258112(7088K) max = 1073741824(1048576K)
+	Collection Usage: null
+	Peak Usage: init = 0(0K) used = 6637376(6481K) committed = 7258112(7088K) max = 1073741824(1048576K)
+	Type: Non-heap memory
+	Memory Manager Names: [Metaspace Manager]
+Name: PS Survivor Space
+	Usage: init = 89128960(87040K) used = 0(0K) committed = 89128960(87040K) max = 89128960(87040K)
+	Collection Usage: init = 89128960(87040K) used = 0(0K) committed = 89128960(87040K) max = 89128960(87040K)
+	Peak Usage: init = 89128960(87040K) used = 25925632(25318K) committed = 89128960(87040K) max = 89128960(87040K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep, PS Scavenge]
+Name: PS Eden Space
+	Usage: init = 537395200(524800K) used = 288505960(281744K) committed = 537395200(524800K) max = 537395200(524800K)
+	Collection Usage: init = 537395200(524800K) used = 0(0K) committed = 537395200(524800K) max = 537395200(524800K)
+	Peak Usage: init = 537395200(524800K) used = 288505960(281744K) committed = 537395200(524800K) max = 537395200(524800K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep, PS Scavenge]
+Name: CodeHeap 'non-profiled nmethods'
+	Usage: init = 2555904(2496K) used = 2377216(2321K) committed = 2555904(2496K) max = 122912768(120032K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 2377216(2321K) committed = 2555904(2496K) max = 122912768(120032K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+
+INFO  2021-06-25 22:57:17,899 [stardog-user-4] com.complexible.stardog.StardogKernel:write(77): Bulk loading data to new database interdrugs.
+INFO  2021-06-25 22:57:19,745 [stardog-user-4] com.complexible.stardog.plan.cache.SimplePlanCache:clear(137): Clearing 0 cached plans
+INFO  2021-06-25 22:57:19,765 [stardog-user-4] com.complexible.stardog.StardogKernel:write(77): Loaded 85,115 triples to interdrugs from 1 file(s) in 00:00:02.044 @ 41.6K triples/sec.
+INFO  2021-06-25 22:57:19,766 [stardog-user-4] com.complexible.stardog.StardogKernel:write(77): Successfully created database 'interdrugs'.
+INFO  2021-06-25 22:57:19,826 [stardog-user-4] com.complexible.stardog.docs.db.BitesConnectableFactory:createDocumentStore(133): Creating document store for interdrugs at file:////opt/Protege/projects/FinalProject/stardog/interdrugs/docs
+WARN  2021-06-25 22:57:30,701 [stardog-user-2] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:Drug, or(interactingDrugs:ApprovedDrug, interactingDrugs:BiotechDrug, interactingDrugs:ExperimentalDrug, interactingDrugs:IllicitDrug, interactingDrugs:InvestigationalDrug, interactingDrugs:NutraceuticalDrug, interactingDrugs:SmallMoleculeDrug, interactingDrugs:WithdrawnDrug)) 
+WARN  2021-06-25 22:57:30,701 [stardog-user-2] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:DiseaseUnderControl, and(interactingDrugs:Disease, min(interactingDrugs:possibleDrug,4,owl:Thing))) 
+WARN  2021-06-25 22:57:30,702 [stardog-user-2] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:DiseaseUnderInvestigation, and(interactingDrugs:Disease, max(interactingDrugs:possibleDrug,2,owl:Thing))) 
+WARN  2021-06-25 22:57:30,703 [stardog-user-2] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:UnsafeDrug, or(interactingDrugs:IllicitDrug, interactingDrugs:WithdrawnDrug)) 
+WARN  2021-06-25 22:57:30,706 [stardog-user-2] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: DisjointUnion(interactingDrugs:Disease,(interactingDrugs:BoneDisease, interactingDrugs:CancerDisease, interactingDrugs:CardiovascularDisease, interactingDrugs:ConnectiveTissueDisease, interactingDrugs:DermatologicalDisease, interactingDrugs:DevelopmentalDisease, interactingDrugs:EarNoseThroatDisease, interactingDrugs:EndocrineDisease, interactingDrugs:GastrointestinalDisease, interactingDrugs:HematologicalDisease, interactingDrugs:ImmunologicalDisease, interactingDrugs:MetabolicDisease, interactingDrugs:MultipleTypesDisease, interactingDrugs:MuscularDisease, interactingDrugs:NeurologicalDisease, interactingDrugs:NutritionalDisease, interactingDrugs:OphtalmologicalDisease, interactingDrugs:PsychiatricDisease, interactingDrugs:RenalDisease, interactingDrugs:RespiratoryDisease, interactingDrugs:SkeletalDisease, interactingDrugs:UnclassifiedDisease)) 
+INFO  2021-06-25 22:58:14,444 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(127): Memory usage 91% - initiating detailed analysis - will check again in 1m
+INFO  2021-06-25 22:58:14,444 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(128): Stardog JVM memory usage
+OSMemory{ virtualSize=4.4G, residentSize=812M, residentSizePeak=812M, regionCount=1, pinnedSize=0B, vmTotal=7.7G, vmAvailable=685M, pageSize=4.0K}
+INFO  2021-06-25 22:58:14,531 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(133): Stardog Metrics
+databases.interdrugs#dictionary.dict.memtable.total.size.bytes = 728
+databases.interdrugs#dictionary.dict.tableReaderMemory.bytes = 76,696
+databases.interdrugs#dictionary.value.memtable.total.size.bytes = 728
+databases.interdrugs#dictionary.value.tableReaderMemory.bytes = 5,464
+databases.interdrugs#equality.memtable.total.size.bytes = 1,456
+databases.interdrugs#equality.tableReaderMemory.bytes = 0
+databases.interdrugs#stats.memtable.total.size.bytes = 420,344
+databases.interdrugs#stats.tableReaderMemory.bytes = 1,160
+databases.interdrugs#ternary.memtable.total.size.bytes = 728
+databases.interdrugs#ternary.tableReaderMemory.bytes = 31,104
+dbms.memory.blockcache.data.add.count = 204
+dbms.memory.blockcache.data.add.failure.count = 0
+dbms.memory.blockcache.data.cachesIndexBlocks = false
+dbms.memory.blockcache.data.capacity = 182,619,984
+dbms.memory.blockcache.data.hits = 254
+dbms.memory.blockcache.data.iteratorCreated = 0
+dbms.memory.blockcache.data.iteratorDeleted = 0
+dbms.memory.blockcache.data.misses = 204
+dbms.memory.blockcache.data.pinnedUsage = 0
+dbms.memory.blockcache.data.ratio = 0.5545851528384279
+dbms.memory.blockcache.data.read = 16,529,808
+dbms.memory.blockcache.data.strictCapacity = false
+dbms.memory.blockcache.data.usage = 6,390,984
+dbms.memory.blockcache.data.written = 12,901,232
+dbms.memory.blockcache.dictionary.add.count = 364
+dbms.memory.blockcache.dictionary.add.failure.count = 0
+dbms.memory.blockcache.dictionary.cachesIndexBlocks = true
+dbms.memory.blockcache.dictionary.capacity = 91,309,992
+dbms.memory.blockcache.dictionary.hits = 36,038
+dbms.memory.blockcache.dictionary.iteratorCreated = 0
+dbms.memory.blockcache.dictionary.iteratorDeleted = 0
+dbms.memory.blockcache.dictionary.misses = 364
+dbms.memory.blockcache.dictionary.pinnedUsage = 0
+dbms.memory.blockcache.dictionary.ratio = 0.9900005494203615
+dbms.memory.blockcache.dictionary.read = 149,473,232
+dbms.memory.blockcache.dictionary.strictCapacity = false
+dbms.memory.blockcache.dictionary.usage = 1,531,952
+dbms.memory.blockcache.dictionary.written = 1,505,296
+dbms.memory.blockcache.total.capacity = 319,584,972
+dbms.memory.blockcache.total.data.hits = 0
+dbms.memory.blockcache.total.data.misses = 0
+dbms.memory.blockcache.total.data.ratio = 0.0
+dbms.memory.blockcache.total.filter.hits = 0
+dbms.memory.blockcache.total.filter.misses = 0
+dbms.memory.blockcache.total.filter.ratio = 0.0
+dbms.memory.blockcache.total.index.hits = 0
+dbms.memory.blockcache.total.index.misses = 0
+dbms.memory.blockcache.total.index.ratio = 0.0
+dbms.memory.blockcache.total.iteratorCreated = 0
+dbms.memory.blockcache.total.iteratorDeleted = 0
+dbms.memory.blockcache.total.pinnedUsage = 0
+dbms.memory.blockcache.total.usage = 7,922,936
+dbms.memory.blockcache.txn.add.count = 0
+dbms.memory.blockcache.txn.add.failure.count = 0
+dbms.memory.blockcache.txn.cachesIndexBlocks = true
+dbms.memory.blockcache.txn.capacity = 45,654,996
+dbms.memory.blockcache.txn.hits = 0
+dbms.memory.blockcache.txn.iteratorCreated = 0
+dbms.memory.blockcache.txn.iteratorDeleted = 0
+dbms.memory.blockcache.txn.misses = 0
+dbms.memory.blockcache.txn.pinnedUsage = 0
+dbms.memory.blockcache.txn.ratio = 0.0
+dbms.memory.blockcache.txn.read = 0
+dbms.memory.blockcache.txn.strictCapacity = false
+dbms.memory.blockcache.txn.usage = 0
+dbms.memory.blockcache.txn.written = 0
+dbms.memory.config.dict_index_cache = 411,670,938
+dbms.memory.config.dict_value_cache = 411,670,938
+dbms.memory.config.query_mem_blocks = 391,328,563
+dbms.memory.config.starrocks_size = 913,099,980
+dbms.memory.direct.buffer.used = 323,868
+dbms.memory.heap.max = 2,058,354,688
+dbms.memory.heap.query.blocks.max = 0
+dbms.memory.heap.query.blocks.used = 0
+dbms.memory.heap.used = 169,911,848
+dbms.memory.management = NATIVE
+dbms.memory.mapped.used = 0
+dbms.memory.mode = DEFAULT{Starrocks.block_cache=20, Starrocks.dict_block_cache=10, Native.starrocks=70, Heap.dict_value=50, Starrocks.txn_block_cache=5, Heap.dict_index=50, Starrocks.untracked_memory=20, Starrocks.memtable=40, Starrocks.buffer_pool=5, Native.query=30}
+dbms.memory.monitor.interval = 60000
+dbms.memory.monitor.report.threshold = 0.9
+dbms.memory.native.max = 1,572,864,000
+dbms.memory.native.query.blocks.max = 391,328,563
+dbms.memory.native.query.blocks.used = 0
+dbms.memory.system.pageSize = 4,096
+dbms.memory.system.pinnedSize = 0
+dbms.memory.system.regionCount = 1
+dbms.memory.system.rss = 850,944,000
+dbms.memory.system.rss.peak = 851,030,016
+dbms.memory.system.usageRatio = 0.9130713740722758
+dbms.memory.system.virtual = 4,717,854,720
+INFO  2021-06-25 22:58:14,532 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(135): System mem
+Total Memory: 8267284480
+Available Memory: 718663680
+INFO  2021-06-25 22:58:14,532 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(136): init = 2.0G used = 162M committed = 1.9G max = 1.9G
+INFO  2021-06-25 22:58:14,534 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(137): 
+DETAILED MEMORY INFO
+Heap Memory Usage: init = 2147483648(2097152K) used = 169911848(165929K) committed = 2058354688(2010112K) max = 2058354688(2010112K)
+Non-Heap Memory Usage: init = 7667712(7488K) used = 93582112(91388K) committed = 98009088(95712K) max = -1(-1K)
+Name: PS MarkSweep
+	Collection count: 3
+	Collection time: 276
+	Memory Pools: [PS Eden Space, PS Survivor Space, PS Old Gen]
+Name: PS Scavenge
+	Collection count: 4
+	Collection time: 62
+	Memory Pools: [PS Eden Space, PS Survivor Space]
+
+Memory Pools Info
+Name: CodeHeap 'non-nmethods'
+	Usage: init = 2555904(2496K) used = 1386752(1354K) committed = 2555904(2496K) max = 5832704(5696K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 1440128(1406K) committed = 2555904(2496K) max = 5832704(5696K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+Name: Metaspace
+	Usage: init = 0(0K) used = 63011120(61534K) committed = 65323008(63792K) max = -1(-1K)
+	Collection Usage: null
+	Peak Usage: init = 0(0K) used = 63011120(61534K) committed = 65323008(63792K) max = -1(-1K)
+	Type: Non-heap memory
+	Memory Manager Names: [Metaspace Manager]
+Name: CodeHeap 'profiled nmethods'
+	Usage: init = 2555904(2496K) used = 16094848(15717K) committed = 16121856(15744K) max = 122912768(120032K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 16094848(15717K) committed = 16121856(15744K) max = 122912768(120032K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+Name: PS Old Gen
+	Usage: init = 1431830528(1398272K) used = 44779760(43730K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Collection Usage: init = 1431830528(1398272K) used = 44779760(43730K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Peak Usage: init = 1431830528(1398272K) used = 44779760(43730K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep]
+Name: Compressed Class Space
+	Usage: init = 0(0K) used = 8078064(7888K) committed = 8962048(8752K) max = 1073741824(1048576K)
+	Collection Usage: null
+	Peak Usage: init = 0(0K) used = 8078064(7888K) committed = 8962048(8752K) max = 1073741824(1048576K)
+	Type: Non-heap memory
+	Memory Manager Names: [Metaspace Manager]
+Name: PS Survivor Space
+	Usage: init = 89128960(87040K) used = 0(0K) committed = 89128960(87040K) max = 89128960(87040K)
+	Collection Usage: init = 89128960(87040K) used = 0(0K) committed = 89128960(87040K) max = 89128960(87040K)
+	Peak Usage: init = 89128960(87040K) used = 25925632(25318K) committed = 89128960(87040K) max = 89128960(87040K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep, PS Scavenge]
+Name: PS Eden Space
+	Usage: init = 537395200(524800K) used = 125132088(122199K) committed = 537395200(524800K) max = 537395200(524800K)
+	Collection Usage: init = 537395200(524800K) used = 0(0K) committed = 537395200(524800K) max = 537395200(524800K)
+	Peak Usage: init = 537395200(524800K) used = 537395200(524800K) committed = 537395200(524800K) max = 537395200(524800K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep, PS Scavenge]
+Name: CodeHeap 'non-profiled nmethods'
+	Usage: init = 2555904(2496K) used = 5012096(4894K) committed = 5046272(4928K) max = 122912768(120032K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 5012096(4894K) committed = 5046272(4928K) max = 122912768(120032K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+
+WARN  2021-06-25 22:58:59,905 [stardog-user-4] com.complexible.stardog.protocols.http.server.StardogUndertowErrorHandler:accept(68): Unexpected exception was handled by the server
+com.complexible.stardog.server.DatabaseExistsException: Database already exists: interdrugs
+	at com.complexible.stardog.action.CreateDatabaseKernelAction.execute(CreateDatabaseKernelAction.java:242) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.createDatabase(StardogKernel.java:1287) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.StardogKernel.createDatabase(StardogKernel.java:1380) ~[stardog-7.6.4.jar:?]
+	at com.complexible.stardog.protocols.http.server.AdminDatabaseService.createNewDatabase(AdminDatabaseService.java:810) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at com.stardog.http.server.undertow.jaxrs.ExtractRoutes.lambda$handleIt$5(ExtractRoutes.java:192) ~[stardog-protocols-http-server-7.6.4.jar:?]
+	at org.apache.shiro.subject.support.SubjectRunnable.doRun(SubjectRunnable.java:120) [shiro-core-1.7.1.jar:1.7.1]
+	at org.apache.shiro.subject.support.SubjectRunnable.run(SubjectRunnable.java:108) [shiro-core-1.7.1.jar:1.7.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+INFO  2021-06-25 22:59:14,535 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(127): Memory usage 92% - initiating detailed analysis - will check again in 1m
+INFO  2021-06-25 22:59:14,536 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(128): Stardog JVM memory usage
+OSMemory{ virtualSize=4.4G, residentSize=812M, residentSizePeak=812M, regionCount=1, pinnedSize=0B, vmTotal=7.7G, vmAvailable=658M, pageSize=4.0K}
+INFO  2021-06-25 22:59:14,545 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(133): Stardog Metrics
+databases.interdrugs#dictionary.dict.memtable.total.size.bytes = 728
+databases.interdrugs#dictionary.dict.tableReaderMemory.bytes = 76,696
+databases.interdrugs#dictionary.value.memtable.total.size.bytes = 728
+databases.interdrugs#dictionary.value.tableReaderMemory.bytes = 5,464
+databases.interdrugs#equality.memtable.total.size.bytes = 1,456
+databases.interdrugs#equality.tableReaderMemory.bytes = 0
+databases.interdrugs#stats.memtable.total.size.bytes = 420,344
+databases.interdrugs#stats.tableReaderMemory.bytes = 1,160
+databases.interdrugs#ternary.memtable.total.size.bytes = 728
+databases.interdrugs#ternary.tableReaderMemory.bytes = 31,104
+dbms.memory.blockcache.data.add.count = 204
+dbms.memory.blockcache.data.add.failure.count = 0
+dbms.memory.blockcache.data.cachesIndexBlocks = false
+dbms.memory.blockcache.data.capacity = 182,619,984
+dbms.memory.blockcache.data.hits = 254
+dbms.memory.blockcache.data.iteratorCreated = 0
+dbms.memory.blockcache.data.iteratorDeleted = 0
+dbms.memory.blockcache.data.misses = 204
+dbms.memory.blockcache.data.pinnedUsage = 0
+dbms.memory.blockcache.data.ratio = 0.5545851528384279
+dbms.memory.blockcache.data.read = 16,529,808
+dbms.memory.blockcache.data.strictCapacity = false
+dbms.memory.blockcache.data.usage = 6,390,984
+dbms.memory.blockcache.data.written = 12,901,232
+dbms.memory.blockcache.dictionary.add.count = 364
+dbms.memory.blockcache.dictionary.add.failure.count = 0
+dbms.memory.blockcache.dictionary.cachesIndexBlocks = true
+dbms.memory.blockcache.dictionary.capacity = 91,309,992
+dbms.memory.blockcache.dictionary.hits = 36,038
+dbms.memory.blockcache.dictionary.iteratorCreated = 0
+dbms.memory.blockcache.dictionary.iteratorDeleted = 0
+dbms.memory.blockcache.dictionary.misses = 364
+dbms.memory.blockcache.dictionary.pinnedUsage = 0
+dbms.memory.blockcache.dictionary.ratio = 0.9900005494203615
+dbms.memory.blockcache.dictionary.read = 149,473,232
+dbms.memory.blockcache.dictionary.strictCapacity = false
+dbms.memory.blockcache.dictionary.usage = 1,531,952
+dbms.memory.blockcache.dictionary.written = 1,505,296
+dbms.memory.blockcache.total.capacity = 319,584,972
+dbms.memory.blockcache.total.data.hits = 0
+dbms.memory.blockcache.total.data.misses = 0
+dbms.memory.blockcache.total.data.ratio = 0.0
+dbms.memory.blockcache.total.filter.hits = 0
+dbms.memory.blockcache.total.filter.misses = 0
+dbms.memory.blockcache.total.filter.ratio = 0.0
+dbms.memory.blockcache.total.index.hits = 0
+dbms.memory.blockcache.total.index.misses = 0
+dbms.memory.blockcache.total.index.ratio = 0.0
+dbms.memory.blockcache.total.iteratorCreated = 0
+dbms.memory.blockcache.total.iteratorDeleted = 0
+dbms.memory.blockcache.total.pinnedUsage = 0
+dbms.memory.blockcache.total.usage = 7,922,936
+dbms.memory.blockcache.txn.add.count = 0
+dbms.memory.blockcache.txn.add.failure.count = 0
+dbms.memory.blockcache.txn.cachesIndexBlocks = true
+dbms.memory.blockcache.txn.capacity = 45,654,996
+dbms.memory.blockcache.txn.hits = 0
+dbms.memory.blockcache.txn.iteratorCreated = 0
+dbms.memory.blockcache.txn.iteratorDeleted = 0
+dbms.memory.blockcache.txn.misses = 0
+dbms.memory.blockcache.txn.pinnedUsage = 0
+dbms.memory.blockcache.txn.ratio = 0.0
+dbms.memory.blockcache.txn.read = 0
+dbms.memory.blockcache.txn.strictCapacity = false
+dbms.memory.blockcache.txn.usage = 0
+dbms.memory.blockcache.txn.written = 0
+dbms.memory.config.dict_index_cache = 411,670,938
+dbms.memory.config.dict_value_cache = 411,670,938
+dbms.memory.config.query_mem_blocks = 391,328,563
+dbms.memory.config.starrocks_size = 913,099,980
+dbms.memory.direct.buffer.used = 372,980
+dbms.memory.heap.max = 2,058,354,688
+dbms.memory.heap.query.blocks.max = 0
+dbms.memory.heap.query.blocks.used = 0
+dbms.memory.heap.used = 176,223,408
+dbms.memory.management = NATIVE
+dbms.memory.mapped.used = 0
+dbms.memory.mode = DEFAULT{Starrocks.block_cache=20, Starrocks.dict_block_cache=10, Native.starrocks=70, Heap.dict_value=50, Starrocks.txn_block_cache=5, Heap.dict_index=50, Starrocks.untracked_memory=20, Starrocks.memtable=40, Starrocks.buffer_pool=5, Native.query=30}
+dbms.memory.monitor.interval = 60000
+dbms.memory.monitor.report.threshold = 0.9
+dbms.memory.native.max = 1,572,864,000
+dbms.memory.native.query.blocks.max = 391,328,563
+dbms.memory.native.query.blocks.used = 0
+dbms.memory.system.pageSize = 4,096
+dbms.memory.system.pinnedSize = 0
+dbms.memory.system.regionCount = 1
+dbms.memory.system.rss = 851,419,136
+dbms.memory.system.rss.peak = 851,656,704
+dbms.memory.system.usageRatio = 0.9164988753356652
+dbms.memory.system.virtual = 4,717,854,720
+INFO  2021-06-25 22:59:14,546 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(135): System mem
+Total Memory: 8267284480
+Available Memory: 690327552
+INFO  2021-06-25 22:59:14,547 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(136): init = 2.0G used = 168M committed = 1.9G max = 1.9G
+INFO  2021-06-25 22:59:14,549 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(137): 
+DETAILED MEMORY INFO
+Heap Memory Usage: init = 2147483648(2097152K) used = 176223408(172093K) committed = 2058354688(2010112K) max = 2058354688(2010112K)
+Non-Heap Memory Usage: init = 7667712(7488K) used = 93743568(91546K) committed = 98140160(95840K) max = -1(-1K)
+Name: PS MarkSweep
+	Collection count: 3
+	Collection time: 276
+	Memory Pools: [PS Eden Space, PS Survivor Space, PS Old Gen]
+Name: PS Scavenge
+	Collection count: 4
+	Collection time: 62
+	Memory Pools: [PS Eden Space, PS Survivor Space]
+
+Memory Pools Info
+Name: CodeHeap 'non-nmethods'
+	Usage: init = 2555904(2496K) used = 1386752(1354K) committed = 2555904(2496K) max = 5832704(5696K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 1440128(1406K) committed = 2555904(2496K) max = 5832704(5696K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+Name: Metaspace
+	Usage: init = 0(0K) used = 63057248(61579K) committed = 65323008(63792K) max = -1(-1K)
+	Collection Usage: null
+	Peak Usage: init = 0(0K) used = 63057248(61579K) committed = 65323008(63792K) max = -1(-1K)
+	Type: Non-heap memory
+	Memory Manager Names: [Metaspace Manager]
+Name: CodeHeap 'profiled nmethods'
+	Usage: init = 2555904(2496K) used = 16202368(15822K) committed = 16252928(15872K) max = 122912768(120032K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 16202368(15822K) committed = 16252928(15872K) max = 122912768(120032K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+Name: PS Old Gen
+	Usage: init = 1431830528(1398272K) used = 44779760(43730K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Collection Usage: init = 1431830528(1398272K) used = 44779760(43730K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Peak Usage: init = 1431830528(1398272K) used = 44779760(43730K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep]
+Name: Compressed Class Space
+	Usage: init = 0(0K) used = 8079128(7889K) committed = 8962048(8752K) max = 1073741824(1048576K)
+	Collection Usage: null
+	Peak Usage: init = 0(0K) used = 8079128(7889K) committed = 8962048(8752K) max = 1073741824(1048576K)
+	Type: Non-heap memory
+	Memory Manager Names: [Metaspace Manager]
+Name: PS Survivor Space
+	Usage: init = 89128960(87040K) used = 0(0K) committed = 89128960(87040K) max = 89128960(87040K)
+	Collection Usage: init = 89128960(87040K) used = 0(0K) committed = 89128960(87040K) max = 89128960(87040K)
+	Peak Usage: init = 89128960(87040K) used = 25925632(25318K) committed = 89128960(87040K) max = 89128960(87040K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep, PS Scavenge]
+Name: PS Eden Space
+	Usage: init = 537395200(524800K) used = 131443648(128362K) committed = 537395200(524800K) max = 537395200(524800K)
+	Collection Usage: init = 537395200(524800K) used = 0(0K) committed = 537395200(524800K) max = 537395200(524800K)
+	Peak Usage: init = 537395200(524800K) used = 537395200(524800K) committed = 537395200(524800K) max = 537395200(524800K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep, PS Scavenge]
+Name: CodeHeap 'non-profiled nmethods'
+	Usage: init = 2555904(2496K) used = 5026048(4908K) committed = 5046272(4928K) max = 122912768(120032K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 5026048(4908K) committed = 5046272(4928K) max = 122912768(120032K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+
+INFO  2021-06-25 22:59:43,509 [stardog-user-1] com.complexible.stardog.plan.cache.SimplePlanCache:clear(137): Clearing 2 cached plans
+INFO  2021-06-25 22:59:49,049 [stardog-user-2] com.complexible.stardog.StardogKernel:write(77): Bulk loading data to new database interdrugs.
+INFO  2021-06-25 22:59:51,083 [stardog-user-2] com.complexible.stardog.plan.cache.SimplePlanCache:clear(137): Clearing 0 cached plans
+INFO  2021-06-25 22:59:51,085 [stardog-user-2] com.complexible.stardog.StardogKernel:write(77): Loaded 95,071 triples to interdrugs from 2 file(s) in 00:00:02.221 @ 42.8K triples/sec.
+INFO  2021-06-25 22:59:51,085 [stardog-user-2] com.complexible.stardog.StardogKernel:write(77): Successfully created database 'interdrugs'.
+INFO  2021-06-25 22:59:51,107 [stardog-user-2] com.complexible.stardog.docs.db.BitesConnectableFactory:createDocumentStore(133): Creating document store for interdrugs at file:////opt/Protege/projects/FinalProject/stardog/interdrugs/docs
+WARN  2021-06-25 22:59:59,408 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:Drug, or(interactingDrugs:ApprovedDrug, interactingDrugs:BiotechDrug, interactingDrugs:ExperimentalDrug, interactingDrugs:IllicitDrug, interactingDrugs:InvestigationalDrug, interactingDrugs:NutraceuticalDrug, interactingDrugs:SmallMoleculeDrug, interactingDrugs:WithdrawnDrug)) 
+WARN  2021-06-25 22:59:59,408 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:Drug, or(interactingDrugs:ApprovedDrug, interactingDrugs:BiotechDrug, interactingDrugs:ExperimentalDrug, interactingDrugs:IllicitDrug, interactingDrugs:InvestigationalDrug, interactingDrugs:NutraceuticalDrug, interactingDrugs:SmallMoleculeDrug, interactingDrugs:WithdrawnDrug)) 
+WARN  2021-06-25 22:59:59,409 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:DiseaseUnderControl, and(interactingDrugs:Disease, min(interactingDrugs:possibleDrug,4,owl:Thing))) 
+WARN  2021-06-25 22:59:59,409 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:DiseaseUnderControl, and(interactingDrugs:Disease, min(interactingDrugs:possibleDrug,4,owl:Thing))) 
+WARN  2021-06-25 22:59:59,409 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:DiseaseUnderInvestigation, and(interactingDrugs:Disease, max(interactingDrugs:possibleDrug,2,owl:Thing))) 
+WARN  2021-06-25 22:59:59,409 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:DiseaseUnderInvestigation, and(interactingDrugs:Disease, max(interactingDrugs:possibleDrug,2,owl:Thing))) 
+WARN  2021-06-25 22:59:59,410 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:UnsafeDrug, or(interactingDrugs:IllicitDrug, interactingDrugs:WithdrawnDrug)) 
+WARN  2021-06-25 22:59:59,410 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: EquivalentClasses(interactingDrugs:UnsafeDrug, or(interactingDrugs:IllicitDrug, interactingDrugs:WithdrawnDrug)) 
+WARN  2021-06-25 22:59:59,413 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: DisjointUnion(interactingDrugs:Disease,(interactingDrugs:BoneDisease, interactingDrugs:CancerDisease, interactingDrugs:CardiovascularDisease, interactingDrugs:ConnectiveTissueDisease, interactingDrugs:DermatologicalDisease, interactingDrugs:DevelopmentalDisease, interactingDrugs:EarNoseThroatDisease, interactingDrugs:EndocrineDisease, interactingDrugs:GastrointestinalDisease, interactingDrugs:HematologicalDisease, interactingDrugs:ImmunologicalDisease, interactingDrugs:MetabolicDisease, interactingDrugs:MultipleTypesDisease, interactingDrugs:MuscularDisease, interactingDrugs:NeurologicalDisease, interactingDrugs:NutritionalDisease, interactingDrugs:OphtalmologicalDisease, interactingDrugs:PsychiatricDisease, interactingDrugs:RenalDisease, interactingDrugs:RespiratoryDisease, interactingDrugs:SkeletalDisease, interactingDrugs:UnclassifiedDisease)) 
+WARN  2021-06-25 22:59:59,413 [stardog-user-3] com.clarkparsia.blackout.ProfileFilterBase:apply(39): Not a valid SL axiom: DisjointUnion(interactingDrugs:Disease,(interactingDrugs:BoneDisease, interactingDrugs:CancerDisease, interactingDrugs:CardiovascularDisease, interactingDrugs:ConnectiveTissueDisease, interactingDrugs:DermatologicalDisease, interactingDrugs:DevelopmentalDisease, interactingDrugs:EarNoseThroatDisease, interactingDrugs:EndocrineDisease, interactingDrugs:GastrointestinalDisease, interactingDrugs:HematologicalDisease, interactingDrugs:ImmunologicalDisease, interactingDrugs:MetabolicDisease, interactingDrugs:MultipleTypesDisease, interactingDrugs:MuscularDisease, interactingDrugs:NeurologicalDisease, interactingDrugs:NutritionalDisease, interactingDrugs:OphtalmologicalDisease, interactingDrugs:PsychiatricDisease, interactingDrugs:RenalDisease, interactingDrugs:RespiratoryDisease, interactingDrugs:SkeletalDisease, interactingDrugs:UnclassifiedDisease)) 
+INFO  2021-06-25 23:00:14,550 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(127): Memory usage 90% - initiating detailed analysis - will check again in 1m
+INFO  2021-06-25 23:00:14,551 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(128): Stardog JVM memory usage
+OSMemory{ virtualSize=4.4G, residentSize=887M, residentSizePeak=887M, regionCount=1, pinnedSize=0B, vmTotal=7.7G, vmAvailable=764M, pageSize=4.0K}
+INFO  2021-06-25 23:00:14,565 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(133): Stardog Metrics
+databases.interdrugs#dictionary.dict.memtable.total.size.bytes = 728
+databases.interdrugs#dictionary.dict.tableReaderMemory.bytes = 76,840
+databases.interdrugs#dictionary.value.memtable.total.size.bytes = 728
+databases.interdrugs#dictionary.value.tableReaderMemory.bytes = 5,632
+databases.interdrugs#equality.memtable.total.size.bytes = 1,456
+databases.interdrugs#equality.tableReaderMemory.bytes = 0
+databases.interdrugs#stats.memtable.total.size.bytes = 420,688
+databases.interdrugs#stats.tableReaderMemory.bytes = 1,208
+databases.interdrugs#ternary.memtable.total.size.bytes = 728
+databases.interdrugs#ternary.tableReaderMemory.bytes = 34,336
+dbms.memory.blockcache.data.add.count = 395
+dbms.memory.blockcache.data.add.failure.count = 0
+dbms.memory.blockcache.data.cachesIndexBlocks = false
+dbms.memory.blockcache.data.capacity = 182,619,984
+dbms.memory.blockcache.data.hits = 2,484
+dbms.memory.blockcache.data.iteratorCreated = 0
+dbms.memory.blockcache.data.iteratorDeleted = 0
+dbms.memory.blockcache.data.misses = 395
+dbms.memory.blockcache.data.pinnedUsage = 0
+dbms.memory.blockcache.data.ratio = 0.8627995831886072
+dbms.memory.blockcache.data.read = 162,702,800
+dbms.memory.blockcache.data.strictCapacity = false
+dbms.memory.blockcache.data.usage = 11,289,616
+dbms.memory.blockcache.data.written = 25,006,256
+dbms.memory.blockcache.dictionary.add.count = 663
+dbms.memory.blockcache.dictionary.add.failure.count = 0
+dbms.memory.blockcache.dictionary.cachesIndexBlocks = true
+dbms.memory.blockcache.dictionary.capacity = 91,309,992
+dbms.memory.blockcache.dictionary.hits = 40,939
+dbms.memory.blockcache.dictionary.iteratorCreated = 0
+dbms.memory.blockcache.dictionary.iteratorDeleted = 0
+dbms.memory.blockcache.dictionary.misses = 663
+dbms.memory.blockcache.dictionary.pinnedUsage = 0
+dbms.memory.blockcache.dictionary.ratio = 0.9840632661891255
+dbms.memory.blockcache.dictionary.read = 169,789,776
+dbms.memory.blockcache.dictionary.strictCapacity = false
+dbms.memory.blockcache.dictionary.usage = 1,245,696
+dbms.memory.blockcache.dictionary.written = 2,742,656
+dbms.memory.blockcache.total.capacity = 319,584,972
+dbms.memory.blockcache.total.data.hits = 0
+dbms.memory.blockcache.total.data.misses = 0
+dbms.memory.blockcache.total.data.ratio = 0.0
+dbms.memory.blockcache.total.filter.hits = 0
+dbms.memory.blockcache.total.filter.misses = 0
+dbms.memory.blockcache.total.filter.ratio = 0.0
+dbms.memory.blockcache.total.index.hits = 0
+dbms.memory.blockcache.total.index.misses = 0
+dbms.memory.blockcache.total.index.ratio = 0.0
+dbms.memory.blockcache.total.iteratorCreated = 0
+dbms.memory.blockcache.total.iteratorDeleted = 0
+dbms.memory.blockcache.total.pinnedUsage = 0
+dbms.memory.blockcache.total.usage = 12,535,312
+dbms.memory.blockcache.txn.add.count = 0
+dbms.memory.blockcache.txn.add.failure.count = 0
+dbms.memory.blockcache.txn.cachesIndexBlocks = true
+dbms.memory.blockcache.txn.capacity = 45,654,996
+dbms.memory.blockcache.txn.hits = 0
+dbms.memory.blockcache.txn.iteratorCreated = 0
+dbms.memory.blockcache.txn.iteratorDeleted = 0
+dbms.memory.blockcache.txn.misses = 0
+dbms.memory.blockcache.txn.pinnedUsage = 0
+dbms.memory.blockcache.txn.ratio = 0.0
+dbms.memory.blockcache.txn.read = 0
+dbms.memory.blockcache.txn.strictCapacity = false
+dbms.memory.blockcache.txn.usage = 0
+dbms.memory.blockcache.txn.written = 0
+dbms.memory.config.dict_index_cache = 411,670,938
+dbms.memory.config.dict_value_cache = 411,670,938
+dbms.memory.config.query_mem_blocks = 391,328,563
+dbms.memory.config.starrocks_size = 913,099,980
+dbms.memory.direct.buffer.used = 407,855
+dbms.memory.heap.max = 2,118,123,520
+dbms.memory.heap.query.blocks.max = 0
+dbms.memory.heap.query.blocks.used = 0
+dbms.memory.heap.used = 581,199,256
+dbms.memory.management = NATIVE
+dbms.memory.mapped.used = 0
+dbms.memory.mode = DEFAULT{Starrocks.block_cache=20, Starrocks.dict_block_cache=10, Native.starrocks=70, Heap.dict_value=50, Starrocks.txn_block_cache=5, Heap.dict_index=50, Starrocks.untracked_memory=20, Starrocks.memtable=40, Starrocks.buffer_pool=5, Native.query=30}
+dbms.memory.monitor.interval = 60000
+dbms.memory.monitor.report.threshold = 0.9
+dbms.memory.native.max = 1,572,864,000
+dbms.memory.native.query.blocks.max = 391,328,563
+dbms.memory.native.query.blocks.used = 0
+dbms.memory.system.pageSize = 4,096
+dbms.memory.system.pinnedSize = 0
+dbms.memory.system.regionCount = 1
+dbms.memory.system.rss = 929,828,864
+dbms.memory.system.rss.peak = 929,927,168
+dbms.memory.system.usageRatio = 0.9030901019629604
+dbms.memory.system.virtual = 4,731,404,288
+INFO  2021-06-25 23:00:14,565 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(135): System mem
+Total Memory: 8267284480
+Available Memory: 801181696
+INFO  2021-06-25 23:00:14,566 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(136): init = 2.0G used = 554M committed = 2.0G max = 2.0G
+INFO  2021-06-25 23:00:14,567 [memory-monitor] com.complexible.stardog.api.NativeMemoryMonitor:reportStatus(137): 
+DETAILED MEMORY INFO
+Heap Memory Usage: init = 2147483648(2097152K) used = 581199256(567577K) committed = 2118123520(2068480K) max = 2118123520(2068480K)
+Non-Heap Memory Usage: init = 7667712(7488K) used = 100719256(98358K) committed = 105283584(102816K) max = -1(-1K)
+Name: PS MarkSweep
+	Collection count: 4
+	Collection time: 434
+	Memory Pools: [PS Eden Space, PS Survivor Space, PS Old Gen]
+Name: PS Scavenge
+	Collection count: 6
+	Collection time: 72
+	Memory Pools: [PS Eden Space, PS Survivor Space]
+
+Memory Pools Info
+Name: CodeHeap 'non-nmethods'
+	Usage: init = 2555904(2496K) used = 1387392(1354K) committed = 2555904(2496K) max = 5832704(5696K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 1440128(1406K) committed = 2555904(2496K) max = 5832704(5696K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+Name: Metaspace
+	Usage: init = 0(0K) used = 65082392(63557K) committed = 67420160(65840K) max = -1(-1K)
+	Collection Usage: null
+	Peak Usage: init = 0(0K) used = 65082392(63557K) committed = 67420160(65840K) max = -1(-1K)
+	Type: Non-heap memory
+	Memory Manager Names: [Metaspace Manager]
+Name: CodeHeap 'profiled nmethods'
+	Usage: init = 2555904(2496K) used = 19744896(19282K) committed = 19791872(19328K) max = 122912768(120032K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 19744896(19282K) committed = 19791872(19328K) max = 122912768(120032K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+Name: PS Old Gen
+	Usage: init = 1431830528(1398272K) used = 44200472(43164K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Collection Usage: init = 1431830528(1398272K) used = 44192280(43156K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Peak Usage: init = 1431830528(1398272K) used = 44787952(43738K) committed = 1431830528(1398272K) max = 1431830528(1398272K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep]
+Name: Compressed Class Space
+	Usage: init = 0(0K) used = 8230048(8037K) committed = 9224192(9008K) max = 1073741824(1048576K)
+	Collection Usage: null
+	Peak Usage: init = 0(0K) used = 8230048(8037K) committed = 9224192(9008K) max = 1073741824(1048576K)
+	Type: Non-heap memory
+	Memory Manager Names: [Metaspace Manager]
+Name: PS Survivor Space
+	Usage: init = 89128960(87040K) used = 3555360(3472K) committed = 89128960(87040K) max = 89128960(87040K)
+	Collection Usage: init = 89128960(87040K) used = 3555360(3472K) committed = 89128960(87040K) max = 89128960(87040K)
+	Peak Usage: init = 89128960(87040K) used = 25925632(25318K) committed = 89128960(87040K) max = 89128960(87040K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep, PS Scavenge]
+Name: PS Eden Space
+	Usage: init = 537395200(524800K) used = 533443424(520940K) committed = 597164032(583168K) max = 597164032(583168K)
+	Collection Usage: init = 537395200(524800K) used = 0(0K) committed = 597164032(583168K) max = 597164032(583168K)
+	Peak Usage: init = 537395200(524800K) used = 537395200(524800K) committed = 597164032(583168K) max = 597164032(583168K)
+	Type: Heap memory
+	Memory Manager Names: [PS MarkSweep, PS Scavenge]
+Name: CodeHeap 'non-profiled nmethods'
+	Usage: init = 2555904(2496K) used = 6284288(6137K) committed = 6291456(6144K) max = 122912768(120032K)
+	Collection Usage: null
+	Peak Usage: init = 2555904(2496K) used = 6284288(6137K) committed = 6291456(6144K) max = 122912768(120032K)
+	Type: Non-heap memory
+	Memory Manager Names: [CodeCacheManager]
+

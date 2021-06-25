@@ -1,0 +1,51 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "STARDOG\-ADMIN_DIAGNOSTICS_REPORT" "8" "June 2021" "Stardog Union" "stardog-admin"
+.
+.SH "NAME"
+\fBstardog\-admin_diagnostics_report\fR \- Gathers information for bug reports
+.
+.SH "SYNOPSIS"
+\fBstardog\-admin\fR \fBdiagnostics\fR \fBreport\fR [ {\-d | \-\-databases} ] [ {\-i | \-\-include}
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-d\fR, \fB\-\-databases\fR
+Include everything under STARDOG_HOME in the report
+.
+.TP
+\fB\-i\fR
+This option allows you to include a list of additional specific files\. By default, the command includes any \.log files in $STARDOG_HOME, including stardog\.log, zookeeper\.log and starrocks\.log, as well as audit\.log and access\.log if have them\. It will also include stardog\.properties\. In some cases the default set (which can be seen with the \-\-dry\-run option) will not include all the needed information for a specific system\. If you know of something relevant that should be included in the zip file, this option can be used to include it\. This option can be specified multiple times\.
+.
+.TP
+\fB\-n\fR, \fB\-\-dry\-run\fR
+This option will scan your system for relevant data but not actually create a zip file\. It is useful for trying to audit what files will be copied into the final report\.
+.
+.TP
+\fB\-o\fR
+The path to the report output file\. By default, the command will create a file called stardog\-report_YYYY\-MM\-DD_hh\-mm\-ss\.zip in your current directory\. When using this parameter, you must specify a full file path\.
+.
+.TP
+\fB\-s\fR, \fB\-\-no\-system\fR
+This switch prevents system data like /var/log/kern\.log from being included in the report\. For a complete list of what is included in the report file use the \-\-dry\-run option\.
+.
+.TP
+\fB\-x\fR
+This option allows you to black list files from the report\. It can be handy if you have secrets in your stardog\.properties file\. It can be specified multiple times\.
+.
+.SH "EXAMPLES"
+.
+.TP
+Gather up information from the system and create a zip file that can be used for debugging\.
+$ stardog\-admin diagnostics report
+.
+.TP
+Do a dry run and include the properties file for \fImyDB\fR\.
+$ stardog\-admin diagnostics report \-n \-i $STARDOG_HOME/<myDB>/index\.metadata
+.
+.TP
+Exclude stardog\.log and create a file with a specific file name in $STARDOG_HOME
+$ stardog\-admin diagnostics report \-x $STARDOG_HOME/stardog\.log \-o $STARDOG_HOME/filesForStardog\.zip
+

@@ -1,0 +1,72 @@
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    body { margin: 50px; }
+</style>
+<body>
+<hr/>
+<h1 class="text-info">stardog-admin server migrate Manual Page
+<hr/>
+<h1 class="text-info">NAME</h1>
+<br/>
+<div class="row"><div class="span8 offset1">stardog-admin server migrate &mdash;Migrates the contents of a Stardog home directory from an old version to the current version.</div>
+</div>
+<br/>
+<h1 class="text-info">SYNOPSIS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+stardog-admin  server  migrate [ {-v | --verbose} ] [--] &lt;old-stardog-home&gt; &lt;new-stardog-home&gt;...</div>
+</div>
+<br/>
+<h1 class="text-info">OPTIONS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+-v, --verbose</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Flag that can cause more detailed information to be printed such as errors and status. Exact output depends upon the command and options used.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--
+</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option can be used to separate command-line options from the list of argument, (useful when arguments might be mistaken for command-line options
+</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+&lt;old-stardog-home&gt; &lt;new-stardog-home&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Location of the old Stardog home directory followed by the location of new Stardog home directory.</div>
+</div>
+<br/>
+<h1 class="text-info">DISCUSSION</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+Migrates the contents of a Stardog home directory from an old version to the current version. The new home directory should exist and contain nothing but the license file.Migration is not needed for most version upgrades but sometimes there are backward-incompatible changes between two versions (e.g. from version 6 to version 7) that requires manual migration. This command migrates the contents of the each database along with the system database that contains users, roles, permissions and other metadata. The stardog.properties file will NOT be copied automatically. Please consult the migration guide in Stardog documentation for any possible changes in the configuration options.</div>
+</div>
+<br/>
+<h1 class="text-info">EXAMPLES</h1>
+<br/>
+<div class="row">
+<div class="span12 offset1">
+<p>
+Migrate the home directory from version 6 to version 7</p>
+<pre>
+    $ stardog-admin migrate /data/stardog/home6 /data/stardog/home7</pre>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "STARDOG\-ADMIN_VIRTUAL_SOURCE_METADATA" "8" "June 2021" "Stardog Union" "stardog-admin"
+.
+.SH "NAME"
+\fBstardog\-admin_virtual_source_metadata\fR \- Query source database metadata used by virtual graphs\. Useful for troubleshooting virtual graph behavior\.
+.
+.SH "SYNOPSIS"
+\fBstardog\-admin\fR [ \-\-krb5 ] [ \-\-krb5\-disable\-rdns ] \fBvirtual\fR \fBsource_metadata\fR [ {\-p | \-\-passwd} \fIpassword\fR ] [ {\-P | \-\-ask\-password} ] [ \-\-run\-as \fIusername\fR ] [ {\-u | \-\-username} \fIusername\fR ] [ {\-v | \-\-verbose} ] [\-\-] \fIoptions\fR \fI[schema name]\fR \fI[table name]\fR\.\.\.
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-\-krb5\fR
+Use the Kerberos environment\.
+.
+.TP
+\fB\-\-krb5\-disable\-rdns\fR
+Disable reverse DNS lookup for Kerberos clients\.
+.
+.TP
+\fB\-p\fR \fIpassword\fR, \fB\-\-passwd\fR \fIpassword\fR
+Password\.
+.
+.TP
+\fB\-P\fR, \fB\-\-ask\-password\fR
+Prompt for password\.
+.
+.TP
+\fB\-\-run\-as\fR \fIusername\fR
+User to impersonate when running the command
+.
+.TP
+\fB\-u\fR \fIusername\fR, \fB\-\-username\fR \fIusername\fR
+User name\.
+.
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Flag that can cause more detailed information to be printed such as errors and status\. Exact output depends upon the command and options used\.
+.
+.TP
+\-\-
+This option can be used to separate command\-line options from the list of arguments (useful when arguments might be mistaken for command\-line options)\.
+.
+.TP
+\fIoptions\fR \fI[schema name]\fR \fI[table name]\fR
+The configuration file for the virtual graph, a schema name and optionally a table name\.
+.
+.SH "EXAMPLES"
+.
+.IP "\(bu" 4
+Query JDBC metadata for available schemas and catalogs: $ stardog\-admin virtual source_metadata source\.properties
+.
+.IP "\(bu" 4
+$ stardog\-admin virtual source_metadata source\.properties source_schema:
+.
+.IP "\(bu" 4
+Query JDBC metadata for fields and constraints in the given schema\-qualified table
+.
+.IP "" 0
+

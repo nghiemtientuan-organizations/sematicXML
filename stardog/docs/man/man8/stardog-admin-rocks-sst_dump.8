@@ -1,0 +1,106 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "STARDOG\-ADMIN_ROCKS_SST_DUMP" "8" "June 2021" "Stardog Union" "stardog-admin"
+.
+.SH "NAME"
+\fBstardog\-admin_rocks_sst_dump\fR \- Display information stored in SST file(s)
+.
+.SH "SYNOPSIS"
+\fBstardog\-admin\fR \fBrocks\fR \fBsst_dump\fR \-\-command \fIcheck|scan|raw|verify|identify\fR [ \-\-compression_level_from \fIcompression_level_from\fR ] [ \-\-compression_level_to \fIcompression_level_to\fR ] [ \-\-compression_max_dict_bytes \fIuint32_t\fR ] [ \-\-compression_types <comma\-separated list of CompressionType members, e\.g\., kSnappyCompression> ] [ \-\-compression_zstd_max_train_bytes \fIuint32_t\fR ] [ \-\-file \fIdata_dir_OR_sst_file\fR ] [ \-\-from \fIuser_key\fR ] [ \-\-home \fIhome\fR ] [ \-\-input_key_hex ] [ \-\-output_hex ] [ \-\-prefix \fIuser_key\fR ] [ \-\-read_num \fIread_num\fR ] [ \-s \fIencryption passphrase\fR ] [ \-\-set_block_size \fIset_block_size\fR ] [ \-\-show_properties ] [ \-\-to \fIuser_key\fR ] [ {\-v | \-\-verbose} ] [ \-\-verify_checksum ]
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-\-command\fR \fIcheck|scan|raw|verify|identify\fR
+check: Iterate over entries in files but don\'t print anything except if an error is encountered (default command) scan: Iterate over entries in files and print them to screen raw: Dump all the table contents to \fIfile_name\fR_dump\.txt verify: Iterate all the blocks in files verifying checksum to detect possible corruption but don\'t print anything except if a corruption is encountered recompress: reports the SST file size if recompressed with different compression types identify: Reports a file is a valid SST file or lists all valid SST files under a directory
+.
+.TP
+\fB\-\-compression_level_from\fR \fIcompression_level_from\fR
+Compression level to start compressing when executing recompress\. One compression type and compression_level_to must also be specified
+.
+.TP
+\fB\-\-compression_level_to\fR \fIcompression_level_to\fR
+Compression level to stop compressing when executing recompress\. One compression type and compression_level_from must also be specified
+.
+.TP
+\fB\-\-compression_max_dict_bytes\fR \fIuint32_t\fR
+Maximum size of dictionary used to prime the compression library
+.
+.TP
+\fB\-\-compression_types\fR <comma\-separated list of CompressionType members, e\.g\., kSnappyCompression>
+Can be combined with \-\-command=recompress to run recompression for this list of compression types
+.
+.TP
+\fB\-\-compression_zstd_max_train_bytes\fR \fIuint32_t\fR
+Maximum size of training data passed to zstd\'s dictionary trainer
+.
+.TP
+\fB\-\-file\fR \fIdata_dir_OR_sst_file\fR
+Path to SST file or directory containing SST files
+.
+.TP
+\fB\-\-from\fR \fIuser_key\fR
+Key to start reading from when executing check|scan
+.
+.TP
+\fB\-\-home\fR \fIhome\fR
+Stardog home directory location\.
+.
+.TP
+\fB\-\-input_key_hex\fR
+Can be combined with \-\-from and \-\-to to indicate that these values are encoded in Hex
+.
+.TP
+\fB\-\-output_hex\fR
+Can be combined with scan command to print the keys and values in Hex
+.
+.TP
+\fB\-\-prefix\fR \fIuser_key\fR
+Returns all keys with this prefix when executing check|scan Cannot be used in conjunction with \-\-from
+.
+.TP
+\fB\-\-read_num\fR \fIread_num\fR
+Maximum number of entries to read when executing check|scan
+.
+.TP
+\fB\-s\fR \fIencryption passphrase\fR
+passphrase to access encrypted databases
+.
+.TP
+\fB\-\-set_block_size\fR \fIset_block_size\fR
+Can be combined with \-\-command=recompress to set the block size that will be used when trying different compression algorithms
+.
+.TP
+\fB\-\-show_properties\fR
+Print table properties after iterating over the file when executing check|scan|raw|identify
+.
+.TP
+\fB\-\-to\fR \fIuser_key\fR
+Key to stop reading at when executing check|scan
+.
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Flag that can cause more detailed information to be printed such as errors and status\. Exact output depends upon the command and options used\.
+.
+.TP
+\fB\-\-verify_checksum\fR
+Verify file checksum when executing check|scan
+.
+.SH "DISCUSSION"
+sst_dump tool can be used to gain insights about a specific SST file\. There are multiple operations that sst_dump can execute on a SST file\. See https://github\.com/facebook/rocksdb/wiki/Administration\-and\-Data\-Access\-Tool
+.
+.SH "EXAMPLES"
+.
+.TP
+Check the SST file format
+$ stardog\-admin rocks sst_dump \-\-home /stardog_home/ \-\-command=identify \-\-verify_checksum
+.
+.TP
+Print SST file contents
+$ stardog\-admin rocks sst_dump \-\-file=/stardog_home/data/000100\.sst \-\-command=scan \-\-read_num=100 \-\-output_hex
+.
+.TP
+Recompress the SST files
+$ stardog\-admin rocks sst_dump \-\-file=/stardog_home/data/000100\.sst \-\-command=recompress \-\-compression_types=kSnappyCompression
+

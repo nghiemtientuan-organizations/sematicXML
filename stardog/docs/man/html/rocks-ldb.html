@@ -1,0 +1,104 @@
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    body { margin: 50px; }
+</style>
+<body>
+<hr/>
+<h1 class="text-info">stardog-admin rocks ldb Manual Page
+<hr/>
+<h1 class="text-info">NAME</h1>
+<br/>
+<div class="row"><div class="span8 offset1">stardog-admin rocks ldb &mdash;Low-Level Administration and Data Access Tool</div>
+</div>
+<br/>
+<h1 class="text-info">SYNOPSIS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+stardog-admin  rocks  ldb [ --home &lt;home&gt; ] [ -s &lt;encryption passphrase&gt; ] [ {-v | --verbose} ] [--] [ &lt;mArgs&gt;... ]</div>
+</div>
+<br/>
+<h1 class="text-info">OPTIONS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+--home &lt;home&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Stardog home directory location.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-s &lt;encryption passphrase&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+passphrase to access encrypted databases</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-v, --verbose</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Flag that can cause more detailed information to be printed such as errors and status. Exact output depends upon the command and options used.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--
+</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option can be used to separate command-line options from the list of argument, (useful when arguments might be mistaken for command-line options
+</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+&lt;mArgs&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Remaining LDB options</div>
+</div>
+<br/>
+<h1 class="text-info">DISCUSSION</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+The ldb command line tool offers multiple data access and database admin commands see https://github.com/facebook/rocksdb/wiki/Administration-and-Data-Access-Tool</div>
+</div>
+<br/>
+<h1 class="text-info">EXAMPLES</h1>
+<br/>
+<div class="row">
+<div class="span12 offset1">
+<p>
+Print detailed help</p>
+<pre>
+$ stardog-admin rocks ldb --help</pre>
+<p>
+List the column families</p>
+<pre>
+$ stardog-admin rocks ldb --home /stardog_home/ list_column_families</pre>
+<p>
+Dump the manifest file contents</p>
+<pre>
+$ stardog-admin rocks ldb --home /stardog_home/ manifest_dump</pre>
+<p>
+Compact the database</p>
+<pre>
+$ stardog-admin rocks ldb --home /stardog_home/ compact</pre>
+<p>
+Get a key</p>
+<pre>
+$ stardog-admin rocks ldb --home /stardog_home/ get &lt;key&gt;</pre>
+</div>
+</div>
+</body>
+</html>
+

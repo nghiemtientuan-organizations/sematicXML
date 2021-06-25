@@ -1,0 +1,117 @@
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    body { margin: 50px; }
+</style>
+<body>
+<hr/>
+<h1 class="text-info">stardog-admin virtual source_metadata Manual Page
+<hr/>
+<h1 class="text-info">NAME</h1>
+<br/>
+<div class="row"><div class="span8 offset1">stardog-admin virtual source_metadata &mdash;Query source database metadata used by virtual graphs. Useful for troubleshooting virtual graph behavior.</div>
+</div>
+<br/>
+<h1 class="text-info">SYNOPSIS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+stardog-admin [ --krb5 ] [ --krb5-disable-rdns ] virtual  source_metadata [ {-p | --passwd} &lt;password&gt; ] [ {-P | --ask-password} ] [ --run-as &lt;username&gt; ] [ {-u | --username} &lt;username&gt; ] [ {-v | --verbose} ] [--] &lt;options&gt; &lt;[schema name]&gt; &lt;[table name]&gt;...</div>
+</div>
+<br/>
+<h1 class="text-info">OPTIONS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+--krb5</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Use the Kerberos environment.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--krb5-disable-rdns</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Disable reverse DNS lookup for Kerberos clients.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-p &lt;password&gt;, --passwd &lt;password&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Password.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-P, --ask-password</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Prompt for password.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--run-as &lt;username&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+User to impersonate when running the command</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-u &lt;username&gt;, --username &lt;username&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+User name.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-v, --verbose</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Flag that can cause more detailed information to be printed such as errors and status. Exact output depends upon the command and options used.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--
+</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option can be used to separate command-line options from the list of argument, (useful when arguments might be mistaken for command-line options
+</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+&lt;options&gt; &lt;[schema name]&gt; &lt;[table name]&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+The configuration file for the virtual graph, a schema name and optionally a table name.</div>
+</div>
+<br/>
+<h1 class="text-info">EXAMPLES</h1>
+<br/>
+<div class="row">
+<div class="span12 offset1">
+<p>
+Query JDBC metadata for available schemas and catalogs</p>
+<pre>
+    $ stardog-admin virtual source_metadata source.properties</pre>
+<p>
+$ stardog-admin virtual source_metadata source.properties source_schema</p>
+<pre>
+* Query JDBC metadata for fields and constraints in the given schema-qualified table</pre>
+</div>
+</div>
+</body>
+</html>
+

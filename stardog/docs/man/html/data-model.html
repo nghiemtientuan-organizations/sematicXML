@@ -1,0 +1,165 @@
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    body { margin: 50px; }
+</style>
+<body>
+<hr/>
+<h1 class="text-info">stardog data model Manual Page
+<hr/>
+<h1 class="text-info">NAME</h1>
+<br/>
+<div class="row"><div class="span8 offset1">stardog data model &mdash;Generates a data model from the specified input and outputs the model in the desired format.</div>
+</div>
+<br/>
+<h1 class="text-info">SYNOPSIS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+stardog [ --krb5 ] [ --krb5-disable-rdns ] data  model [ {-f | --format} &lt;RDF Format&gt; ] [ --include-provenance ] [ --input &lt;input&gt; ] [ --output &lt;output&gt; ] [ {-p | --passwd} &lt;password&gt; ] [ {-P | --ask-password} ] [ {-r | --reasoning} ] [ --run-as &lt;username&gt; ] [ --schema &lt;mSchema&gt; ] [ {-u | --username} &lt;username&gt; ] [ {-v | --verbose} ] [--] &lt;database&gt;</div>
+</div>
+<br/>
+<h1 class="text-info">OPTIONS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+-f &lt;RDF Format&gt;, --format &lt;RDF Format&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+RDF format for outputs that are serialized in RDF. Allowed RDF formats are [NTRIPLES, RDF/XML, TURTLE, PRETTY_TURTLE, TRIG, TRIX, N3, NQUADS, JSONLD].</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--include-provenance</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Whether to include provenance metadata with the model.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--input &lt;input&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+The input source that will be used to generate the data model. Valid values are [OWL, SHACL, VIRTUAL].</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--krb5</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Use the Kerberos environment.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--krb5-disable-rdns</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Disable reverse DNS lookup for Kerberos clients.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--output &lt;output&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+The output format for serializing the data model. Valid values are [GraphQL, SHACL, SQL, TEXT].</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-p &lt;password&gt;, --passwd &lt;password&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Password.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-P, --ask-password</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Prompt for password.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-r, --reasoning</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Turn reasoning on with the default schema.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--run-as &lt;username&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+User to impersonate when running the command</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--schema &lt;mSchema&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Turn reasoning on with the specified schema.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-u &lt;username&gt;, --username &lt;username&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+User name.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-v, --verbose</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Flag that can cause more detailed information to be printed such as errors and status. Exact output depends upon the command and options used.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--
+</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option can be used to separate command-line options from the list of argument, (useful when arguments might be mistaken for command-line options
+</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+&lt;database&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+The name of the database or the full connection string of the database to connect to. If only the name is provided, the default server URL will be pre-pended to the name of the database in order to construct the connection string. Connection parameters such as ';reasoning=true' can be included in the provided database name. Connection parameters specified like this can be overridden by specific options on the command. The default server URL will be read from the JVM argument 'stardog.default.cli.server'. If the JVM argument is not set, the default value 'http://localhost:5820' is used. If the server URL has no explicit port value, the default port value '5820' is used.  To use a secure connection, you should specify the full connection string and postfix 's' to the protocol, e.g. https.</div>
+</div>
+<br/>
+<h1 class="text-info">EXAMPLES</h1>
+<br/>
+<div class="row">
+<div class="span12 offset1">
+<p>
+Generate a data model from the RDFS/OWL schema into a GraphQL schema:</p>
+<pre>
+    $ stardog data model --input OWL --output GraphQL myDb &gt; schema.graphqls</pre>
+<p>
+Convert the SHACL schema into SQL table mappings that can be used by Stardog's BI/SQL server:</p>
+<pre>
+    $ stardog data model --input SHACL --output SQL myDb &gt; tableMappings.ttl</pre>
+</div>
+</div>
+</body>
+</html>
+

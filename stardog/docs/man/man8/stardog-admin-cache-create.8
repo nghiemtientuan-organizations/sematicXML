@@ -1,0 +1,94 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "STARDOG\-ADMIN_CACHE_CREATE" "8" "June 2021" "Stardog Union" "stardog-admin"
+.
+.SH "NAME"
+\fBstardog\-admin_cache_create\fR \- Create a new cached dataset\.
+.
+.SH "SYNOPSIS"
+\fBstardog\-admin\fR [ \-\-krb5 ] [ \-\-krb5\-disable\-rdns ] [ \-\-server \fIserver url\fR ] \fBcache\fR \fBcreate\fR [ {\-d | \-\-database} \fIdatabase\fR ] [ {\-g | \-\-graph} \fIgraphName\fR ] [ {\-p | \-\-passwd} \fIpassword\fR ] [ {\-P | \-\-ask\-password} ] [ {\-q | \-\-query} \fIquery\fR ] [ \-\-refresh\-script \fIrefresh script\fR ] [ \-\-register\-only ] [ \-\-run\-as \fIusername\fR ] [ {\-t | \-\-target} \fItarget\fR ] [ {\-u | \-\-username} \fIusername\fR ] [ {\-v | \-\-verbose} ] [\-\-] \fIname\fR\.\.\.
+.
+.SH "DESCRIPTION"
+Create a new cached dataset\. A cached dataset can be created from either an existing named or virtual graph or from a query\. A cached graph duplicates the entire contents of the graph in the cache\. A cached query stores the results of query execution in the cache\. A cached query must be associated with a database\. The cached results will only be considered for use in queries against the associated database\.
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-d\fR \fIdatabase\fR, \fB\-\-database\fR \fIdatabase\fR
+Database associated with the cached dataset\.
+.
+.TP
+\fB\-g\fR \fIgraphName\fR, \fB\-\-graph\fR \fIgraphName\fR
+Caches a graph with the given name\.
+.
+.TP
+\fB\-\-krb5\fR
+Use the Kerberos environment\.
+.
+.TP
+\fB\-\-krb5\-disable\-rdns\fR
+Disable reverse DNS lookup for Kerberos clients\.
+.
+.TP
+\fB\-p\fR \fIpassword\fR, \fB\-\-passwd\fR \fIpassword\fR
+Password\.
+.
+.TP
+\fB\-P\fR, \fB\-\-ask\-password\fR
+Prompt for password\.
+.
+.TP
+\fB\-q\fR \fIquery\fR, \fB\-\-query\fR \fIquery\fR
+\fIExperimental\fR caches a query\.
+.
+.TP
+\fB\-\-refresh\-script\fR \fIrefresh script\fR
+Refresh script used to refresh the cached dataset\. (Cached graph only)
+.
+.TP
+\fB\-\-register\-only\fR
+Register a cached dataset without loading data for cache targets with existing cache databases\.
+.
+.TP
+\fB\-\-run\-as\fR \fIusername\fR
+User to impersonate when running the command
+.
+.TP
+\fB\-\-server\fR \fIserver url\fR
+URL of Stardog Server\. If this option isn\'t specified, it will be read from JVM argument \'stardog\.default\.cli\.server\'\. If the JVM arg isn\'t set, the default value \'http://localhost:5820\' is used\. If server URL has no explicit port value, the default port value \'5820\' is used\. Example: \'stardog\-admin \-\-server http://12\.34\.56\.78:5820 server stop\'
+.
+.TP
+\fB\-t\fR \fItarget\fR, \fB\-\-target\fR \fItarget\fR
+Cache target on which to store the cached dataset\.The name \'localhost\' can be used to cache locally\.
+.
+.TP
+\fB\-u\fR \fIusername\fR, \fB\-\-username\fR \fIusername\fR
+User name\.
+.
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Flag that can cause more detailed information to be printed such as errors and status\. Exact output depends upon the command and options used\.
+.
+.TP
+\-\-
+This option can be used to separate command\-line options from the list of arguments (useful when arguments might be mistaken for command\-line options)\.
+.
+.TP
+\fIname\fR
+The IRI used to identify the created cached dataset\.
+.
+.SH "EXAMPLES"
+.
+.TP
+Created a cached graph containing the contents of a virtual graph (assuming node1 is a registered cache target)
+$ stardog\-admin cache create cache://virtual\-name \-\-graph virtual://name \-\-target node1
+.
+.TP
+Create a cached graph but do not load the contents
+$ stardog\-admin cache create cache://virtual\-name \-\-graph virtual://name \-\-target node1 \-\-register\-only
+.
+.TP
+\fIExperimental\fR: Created a cached query containing the results of a query on database \'db\'
+$ stardog\-admin cache create cache://query_file \-\-query query_file\.rq \-\-target node1 \-\-database db
+

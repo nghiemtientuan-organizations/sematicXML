@@ -1,0 +1,83 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "STARDOG\-ADMIN_DATA\-SOURCE_ADD" "8" "June 2021" "Stardog Union" "stardog-admin"
+.
+.SH "NAME"
+\fBstardog\-admin_data\-source_add\fR \- Registers a new data source\.
+.
+.SH "SYNOPSIS"
+\fBstardog\-admin\fR [ \-\-krb5 ] [ \-\-krb5\-disable\-rdns ] [ \-\-server \fIserver url\fR ] \fBdata\-source\fR \fBadd\fR [ {\-f | \-\-force} ] [ {\-n | \-\-name} \fIdata source name\fR ] [ {\-o | \-\-overwrite} ] [ {\-p | \-\-passwd} \fIpassword\fR ] [ {\-P | \-\-ask\-password} ] [ \-\-run\-as \fIusername\fR ] [ {\-u | \-\-username} \fIusername\fR ] [ {\-v | \-\-verbose} ] [\-\-] \fIoptions\fR\.\.\.
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-f\fR, \fB\-\-force\fR
+Whether to proceed if this data source has dependent virtual graphs
+.
+.TP
+\fB\-\-krb5\fR
+Use the Kerberos environment\.
+.
+.TP
+\fB\-\-krb5\-disable\-rdns\fR
+Disable reverse DNS lookup for Kerberos clients\.
+.
+.TP
+\fB\-n\fR \fIdata source name\fR, \fB\-\-name\fR \fIdata source name\fR
+Optional override of the data source name
+.
+.TP
+\fB\-o\fR, \fB\-\-overwrite\fR
+If the data source being added already exists, overwrite the existing copy with the new version
+.
+.TP
+\fB\-p\fR \fIpassword\fR, \fB\-\-passwd\fR \fIpassword\fR
+Password\.
+.
+.TP
+\fB\-P\fR, \fB\-\-ask\-password\fR
+Prompt for password\.
+.
+.TP
+\fB\-\-run\-as\fR \fIusername\fR
+User to impersonate when running the command
+.
+.TP
+\fB\-\-server\fR \fIserver url\fR
+URL of Stardog Server\. If this option isn\'t specified, it will be read from JVM argument \'stardog\.default\.cli\.server\'\. If the JVM arg isn\'t set, the default value \'http://localhost:5820\' is used\. If server URL has no explicit port value, the default port value \'5820\' is used\. Example: \'stardog\-admin \-\-server http://12\.34\.56\.78:5820 server stop\'
+.
+.TP
+\fB\-u\fR \fIusername\fR, \fB\-\-username\fR \fIusername\fR
+User name\.
+.
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Flag that can cause more detailed information to be printed such as errors and status\. Exact output depends upon the command and options used\.
+.
+.TP
+\-\-
+This option can be used to separate command\-line options from the list of arguments (useful when arguments might be mistaken for command\-line options)\.
+.
+.TP
+\fIoptions\fR
+The configuration file for the data source\. If no \-\-name option is provided, the name of the configuration file without the extension will be the name of the data source\.
+.
+.SH "EXAMPLES"
+.
+.TP
+Register a new data source named \'myDataSource\', taking the name from the name of the properties file
+$ stardog\-admin data\-source add myDataSource\.properties
+.
+.TP
+Register a new data source named \'myDataSource\', providing the name as an option
+$ stardog\-admin data\-source add \-\-name myDataSource myProperties\.properties
+.
+.TP
+Update an existing data source that has no dependent virtual graphs
+$ stardog\-admin data\-source add \-\-overwrite myDataSource\.properties
+.
+.TP
+Update an existing data source, refreshing all the dependent virtual graphs
+$ stardog\-admin data\-source add \-\-overwrite \-\-force myDataSource\.properties
+

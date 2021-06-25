@@ -1,0 +1,95 @@
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    body { margin: 50px; }
+</style>
+<body>
+<hr/>
+<h1 class="text-info">stardog-admin diagnostics report Manual Page
+<hr/>
+<h1 class="text-info">NAME</h1>
+<br/>
+<div class="row"><div class="span8 offset1">stardog-admin diagnostics report &mdash;Gathers information for bug reports</div>
+</div>
+<br/>
+<h1 class="text-info">SYNOPSIS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+stardog-admin  diagnostics  report [ {-d | --databases} ] [ {-i | --include} &lt;Additional files to include in the report.&gt;... ] [ {-n | --dry-run} ] [ {-o | --output} &lt;The file location where the zip file containing the report will be written.&gt; ] [ {-s | --no-system} ] [ {-x | --exclude} &lt;Specific files to exclude from the report.&gt;... ]</div>
+</div>
+<br/>
+<h1 class="text-info">OPTIONS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+-d, --databases</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Include everything under STARDOG_HOME in the report</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-i &lt;Additional files to include in the report.&gt;, --include &lt;Additional files to include in the report.&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option allows you to include a list of additional specific files. By default, the command includes any .log files in $STARDOG_HOME, including stardog.log, zookeeper.log and starrocks.log, as well as audit.log and access.log if have them. It will also include stardog.properties. In some cases the default set (which can be seen with the --dry-run option) will not include all the needed information for a specific system. If you know of something relevant that should be included in the zip file, this option can be used to include it. This option can be specified multiple times.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-n, --dry-run</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option will scan your system for relevant data but not actually create a zip file. It is useful for trying to audit what files will be copied into the final report. </div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-o &lt;The file location where the zip file containing the report will be written.&gt;, --output &lt;The file location where the zip file containing the report will be written.&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+The path to the report output file. By default, the command will create a file called stardog-report_YYYY-MM-DD_hh-mm-ss.zip in your current directory. When using this parameter, you must specify a full file path.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-s, --no-system</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This switch prevents system data like /var/log/kern.log from being included in the report. For a complete list of what is included in the report file use the --dry-run option.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-x &lt;Specific files to exclude from the report.&gt;, --exclude &lt;Specific files to exclude from the report.&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option allows you to black list files from the report. It can be handy if you have secrets in your stardog.properties file. It can be specified multiple times.</div>
+</div>
+<br/>
+<h1 class="text-info">EXAMPLES</h1>
+<br/>
+<div class="row">
+<div class="span12 offset1">
+<p>
+Gather up information from the system and create a zip file that can be used for debugging.</p>
+<pre>
+    $ stardog-admin diagnostics report</pre>
+<p>
+Do a dry run and include the properties file for <myDB>.</p>
+<pre>
+    $ stardog-admin diagnostics report -n -i $STARDOG_HOME/&lt;myDB&gt;/index.metadata</pre>
+<p>
+Exclude stardog.log and create a file with a specific file name in $STARDOG_HOME</p>
+<pre>
+    $ stardog-admin diagnostics report -x $STARDOG_HOME/stardog.log -o $STARDOG_HOME/filesForStardog.zip</pre>
+</div>
+</div>
+</body>
+</html>
+

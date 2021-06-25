@@ -1,0 +1,78 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "STARDOG_TEST_CREATE" "1" "June 2021" "Stardog Union" "stardog"
+.
+.SH "NAME"
+\fBstardog_test_create\fR \- Create test definitions from a set of queries in a directory\.
+.
+.SH "SYNOPSIS"
+\fBstardog\fR [ \-\-krb5 ] [ \-\-krb5\-disable\-rdns ] \fBtest\fR \fBcreate\fR [ \-\-glob \fIglob\fR ] [ \-\-no\-timings ] [ \-\-only\-counts ] [ {\-p | \-\-passwd} \fIpassword\fR ] [ {\-P | \-\-ask\-password} ] [ {\-r | \-\-runs} \fIruns\fR ] [ \-\-run\-as \fIusername\fR ] [ {\-u | \-\-username} \fIusername\fR ] [ {\-v | \-\-verbose} ] [ {\-w | \-\-warmups} \fIwarmups\fR ] [\-\-] \fIdirectory\fR\.\.\.
+.
+.SH "DESCRIPTION"
+Create test definitions from a set of queries in a directory\. The command will recursively traverse the directory, find query files matching the provided glob expression (default: *\.{sparql,rq}), execute the query against the provided database and generate one test definition file for each directory\. Test definition file will contain one test for each query file found\. The expected time for the query will be computed by running the query first as many as {@code \-\-runs} times taking the average\. The query is run as many as {@code \-\-warmups} times first but execution times for warmups are disregarded\. The expected results for the queries are saved into a file in the same directory as the query\. If queries return too many results or results change at every execution (e\.g\. due to {@code UUID} or {@code RAND} functions) then {@code \-\-only\-counts} option can be used to record the number of results expected instead of actual query results\.
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-\-glob\fR \fIglob\fR
+The glob expression to use for finding files in the directory\. The default is looking for fileswith extension ,sparql or \.rq\.
+.
+.TP
+\fB\-\-krb5\fR
+Use the Kerberos environment\.
+.
+.TP
+\fB\-\-krb5\-disable\-rdns\fR
+Disable reverse DNS lookup for Kerberos clients\.
+.
+.TP
+\fB\-\-no\-timings\fR
+Do not include expected times for queries in the test definition\.\.
+.
+.TP
+\fB\-\-only\-counts\fR
+Include only expected number of results in the test definition and not the actual results\. \.
+.
+.TP
+\fB\-p\fR \fIpassword\fR, \fB\-\-passwd\fR \fIpassword\fR
+Password\.
+.
+.TP
+\fB\-P\fR, \fB\-\-ask\-password\fR
+Prompt for password\.
+.
+.TP
+\fB\-r\fR \fIruns\fR, \fB\-\-runs\fR \fIruns\fR
+The number of test runs to execute\. Each query will be executed these many times and the expected query execution time will be computed as the average of these runs\. The default is two (2)\.
+.
+.TP
+\fB\-\-run\-as\fR \fIusername\fR
+User to impersonate when running the command
+.
+.TP
+\fB\-u\fR \fIusername\fR, \fB\-\-username\fR \fIusername\fR
+User name\.
+.
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Flag that can cause more detailed information to be printed such as errors and status\. Exact output depends upon the command and options used\.
+.
+.TP
+\fB\-w\fR \fIwarmups\fR, \fB\-\-warmups\fR \fIwarmups\fR
+The number of warmups to run\. Each query in the test suite will be run these many timesbefore average query execution times are computed\. The default is three (3)\.
+.
+.TP
+\-\-
+This option can be used to separate command\-line options from the list of arguments (useful when arguments might be mistaken for command\-line options)\.
+.
+.TP
+\fIdirectory\fR
+The name of the database or the full connection string of the database to connect to\. If only the name is provided, the default server URL will be pre\-pended to the name of the database in order to construct the connection string\. Connection parameters such as \';reasoning=true\' can be included in the provided database name\. Connection parameters specified like this can be overridden by specific options on the command\. The default server URL will be read from the JVM argument \'stardog\.default\.cli\.server\'\. If the JVM argument is not set, the default value \'http://localhost:5820\' is used\. If the server URL has no explicit port value, the default port value \'5820\' is used\. To use a secure connection, you should specify the full connection string and postfix \'s\' to the protocol, e\.g\. https\. Subsequent argument is a directory that contains a set of SPARQL queries\. The directory will be traversed recursively and a test manifest filewill be created under each
+.
+.SH "EXAMPLES"
+.
+.TP
+Creates a test definition file for myDb using default settings:
+$ stardog test create myDb path/to/queryDir
+

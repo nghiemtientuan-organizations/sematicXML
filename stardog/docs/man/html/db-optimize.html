@@ -1,0 +1,136 @@
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    body { margin: 50px; }
+</style>
+<body>
+<hr/>
+<h1 class="text-info">stardog-admin db optimize Manual Page
+<hr/>
+<h1 class="text-info">NAME</h1>
+<br/>
+<div class="row"><div class="span8 offset1">stardog-admin db optimize &mdash;Optimizes the indexes of a database for query answering and disk utilization</div>
+</div>
+<br/>
+<h1 class="text-info">SYNOPSIS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+stardog-admin [ --krb5 ] [ --krb5-disable-rdns ] [ --server &lt;server url&gt; ] db  optimize [ {-o | --option} &lt;options&gt;... ] [ {-p | --passwd} &lt;password&gt; ] [ {-P | --ask-password} ] [ --run-as &lt;username&gt; ] [ {-u | --username} &lt;username&gt; ] [ {-v | --verbose} ] [--] &lt;database&gt;</div>
+</div>
+<br/>
+<h1 class="text-info">OPTIONS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+--krb5</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Use the Kerberos environment.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--krb5-disable-rdns</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Disable reverse DNS lookup for Kerberos clients.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-o &lt;options&gt;, --option &lt;options&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+One or more configuration options to be used for optimization. Each option is a 'key=value' pair; multiple options are separated by whitespaces and the string should be quoted, e.g., '-o "option1=value1 option2=value2"'. </div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-p &lt;password&gt;, --passwd &lt;password&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Password.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-P, --ask-password</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Prompt for password.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--run-as &lt;username&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+User to impersonate when running the command</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--server &lt;server url&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+URL of Stardog Server. If this option isn't specified, it will be read from JVM argument 'stardog.default.cli.server'. If the JVM arg isn't set, the default value 'http://localhost:5820' is used. If server URL has no explicit port value, the default port value '5820' is used.  Example: 'stardog-admin --server http://12.34.56.78:5820 server stop' </div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-u &lt;username&gt;, --username &lt;username&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+User name.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-v, --verbose</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Flag that can cause more detailed information to be printed such as errors and status. Exact output depends upon the command and options used.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--
+</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option can be used to separate command-line options from the list of argument, (useful when arguments might be mistaken for command-line options
+</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+&lt;database&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+The name of the database for the operation</div>
+</div>
+<br/>
+<h1 class="text-info">DISCUSSION</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+Optimizes the indexes of a database for query answering and disk utilization after the database has been heavily modified. If a database has been modified with a large number of additions or removals, some internal structures may become less optimized for query answering. This utility will perform several operations that will help with query answering performance. Which operations are performed depends on the options given. Currently supported options:<br/> * optimize.statistics={true, false}: recomputes the selectivity statistics which is used for query optimization<br/> * optimize.compact={true, false}: compacts the index data structures after update operations<br/> * optimize.vacuum.data={true, false}: frees space by removing quads which have been previously deleted from the database<br/> * optimize.vacuum.dictionary={true, false}: optimizes internal encoding of RDF terms, removes terms which no longer appear in the data<br/> * optimize.search={true, false}: recomputes the full-text search index</div>
+</div>
+<br/>
+<h1 class="text-info">EXAMPLES</h1>
+<br/>
+<div class="row">
+<div class="span12 offset1">
+<p>
+Optimize the database 'myDb':</p>
+<pre>
+    $ stardog-admin db optimize myDb</pre>
+</div>
+</div>
+</body>
+</html>
+

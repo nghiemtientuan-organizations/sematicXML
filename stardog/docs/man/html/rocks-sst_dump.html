@@ -1,0 +1,206 @@
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    body { margin: 50px; }
+</style>
+<body>
+<hr/>
+<h1 class="text-info">stardog-admin rocks sst_dump Manual Page
+<hr/>
+<h1 class="text-info">NAME</h1>
+<br/>
+<div class="row"><div class="span8 offset1">stardog-admin rocks sst_dump &mdash;Display information stored in SST file(s)</div>
+</div>
+<br/>
+<h1 class="text-info">SYNOPSIS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+stardog-admin  rocks  sst_dump --command &lt;check|scan|raw|verify|identify&gt; [ --compression_level_from &lt;compression_level_from&gt; ] [ --compression_level_to &lt;compression_level_to&gt; ] [ --compression_max_dict_bytes &lt;uint32_t&gt; ] [ --compression_types &lt;comma-separated list of CompressionType members, e.g., kSnappyCompression&gt; ] [ --compression_zstd_max_train_bytes &lt;uint32_t&gt; ] [ --file &lt;data_dir_OR_sst_file&gt; ] [ --from &lt;user_key&gt; ] [ --home &lt;home&gt; ] [ --input_key_hex ] [ --output_hex ] [ --prefix &lt;user_key&gt; ] [ --read_num &lt;read_num&gt; ] [ -s &lt;encryption passphrase&gt; ] [ --set_block_size &lt;set_block_size&gt; ] [ --show_properties ] [ --to &lt;user_key&gt; ] [ {-v | --verbose} ] [ --verify_checksum ]</div>
+</div>
+<br/>
+<h1 class="text-info">OPTIONS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+--command &lt;check|scan|raw|verify|identify&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+check: Iterate over entries in files but don't print anything except if an error is encountered (default command)<br/>scan: Iterate over entries in files and print them to screen<br/>raw: Dump all the table contents to &lt;file_name&gt;_dump.txt<br/>verify: Iterate all the blocks in files verifying checksum to detect possible corruption but don't print anything except if a corruption is encountered<br/>recompress: reports the SST file size if recompressed with different compression types<br/>identify: Reports a file is a valid SST file or lists all valid SST files under a directory</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--compression_level_from &lt;compression_level_from&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Compression level to start compressing when executing recompress. One compression type<br/>      and compression_level_to must also be specified</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--compression_level_to &lt;compression_level_to&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Compression level to stop compressing when executing recompress. One compression type<br/>      and compression_level_from must also be specified</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--compression_max_dict_bytes &lt;uint32_t&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Maximum size of dictionary used to prime the compression library</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--compression_types &lt;comma-separated list of CompressionType members, e.g., kSnappyCompression&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Can be combined with --command=recompress to run recompression for this<br/>      list of compression types</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--compression_zstd_max_train_bytes &lt;uint32_t&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Maximum size of training data passed to zstd's dictionary trainer</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--file &lt;data_dir_OR_sst_file&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Path to SST file or directory containing SST files</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--from &lt;user_key&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Key to start reading from when executing check|scan</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--home &lt;home&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Stardog home directory location.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--input_key_hex</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Can be combined with --from and --to to indicate that these values are encoded in Hex</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--output_hex</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Can be combined with scan command to print the keys and values in Hex<br/></div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--prefix &lt;user_key&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Returns all keys with this prefix when executing check|scan<br/>Cannot be used in conjunction with --from</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--read_num &lt;read_num&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Maximum number of entries to read when executing check|scan</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-s &lt;encryption passphrase&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+passphrase to access encrypted databases</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--set_block_size &lt;set_block_size&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Can be combined with --command=recompress to set the block size that will<br/>      be used when trying different compression algorithms</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--show_properties</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Print table properties after iterating over the file when executing<br/>      check|scan|raw|identify</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--to &lt;user_key&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Key to stop reading at when executing check|scan</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-v, --verbose</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Flag that can cause more detailed information to be printed such as errors and status. Exact output depends upon the command and options used.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--verify_checksum</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Verify file checksum when executing check|scan</div>
+</div>
+<br/>
+<h1 class="text-info">DISCUSSION</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+sst_dump tool can be used to gain insights about a specific SST file. There are multiple operations that sst_dump can execute on a SST file. See https://github.com/facebook/rocksdb/wiki/Administration-and-Data-Access-Tool</div>
+</div>
+<br/>
+<h1 class="text-info">EXAMPLES</h1>
+<br/>
+<div class="row">
+<div class="span12 offset1">
+<p>
+Check the SST file format</p>
+<pre>
+$ stardog-admin rocks sst_dump --home /stardog_home/ --command=identify --verify_checksum</pre>
+<p>
+Print SST file contents</p>
+<pre>
+$ stardog-admin rocks sst_dump --file=/stardog_home/data/000100.sst --command=scan --read_num=100  --output_hex</pre>
+<p>
+Recompress the SST files</p>
+<pre>
+$ stardog-admin rocks sst_dump --file=/stardog_home/data/000100.sst --command=recompress --compression_types=kSnappyCompression</pre>
+</div>
+</div>
+</body>
+</html>
+

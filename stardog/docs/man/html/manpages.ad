@@ -1,0 +1,37 @@
+// WARNING: This file is auto-generated. Do NOT edit manually.
+
+=== Stardog CLI
+
+* {manpages}/data-add.html[`data add`], {manpages}/data-export.html[`data export`], {manpages}/data-model.html[`data model`], {manpages}/data-obfuscate.html[`data obfuscate`], {manpages}/data-remove.html[`data remove`], {manpages}/data-size.html[`data size`]
+* {manpages}/doc-count.html[`doc count`], {manpages}/doc-delete.html[`doc delete`], {manpages}/doc-get.html[`doc get`], {manpages}/doc-put.html[`doc put`], {manpages}/doc-reindex.html[`doc reindex`]
+* {manpages}/file-cat.html[`file cat`], {manpages}/file-obfuscate.html[`file obfuscate`], {manpages}/file-split.html[`file split`]
+* {manpages}/graphql-execute.html[`graphql execute`], {manpages}/graphql-explain.html[`graphql explain`], {manpages}/graphql-schema.html[`graphql schema`]
+* {manpages}/icv-convert.html[`icv convert`], {manpages}/icv-explain.html[`icv explain`], {manpages}/icv-export.html[`icv export`], {manpages}/icv-fix.html[`icv fix`], {manpages}/icv-report.html[`icv report`], {manpages}/icv-validate.html[`icv validate`]
+* {manpages}/namespace-add.html[`namespace add`], {manpages}/namespace-export.html[`namespace export`], {manpages}/namespace-import.html[`namespace import`], {manpages}/namespace-list.html[`namespace list`], {manpages}/namespace-remove.html[`namespace remove`]
+* {manpages}/query-execute.html[`query execute`], {manpages}/query-explain.html[`query explain`], {manpages}/query-obfuscate.html[`query obfuscate`], {manpages}/query-search.html[`query search`]
+* {manpages}/reasoning-consistency.html[`reasoning consistency`], {manpages}/reasoning-explain.html[`reasoning explain`], {manpages}/reasoning-schema.html[`reasoning schema`], {manpages}/reasoning-undo.html[`reasoning undo`]
+* {manpages}/test-create.html[`test create`], {manpages}/test-run.html[`test run`]
+* {manpages}/tx-begin.html[`tx begin`], {manpages}/tx-commit.html[`tx commit`], {manpages}/tx-list.html[`tx list`], {manpages}/tx-rollback.html[`tx rollback`]
+
+=== Stardog Admin CLI
+
+* {manpages}/cache-create.html[`cache create`], {manpages}/cache-drop.html[`cache drop`], {manpages}/cache-refresh.html[`cache refresh`], {manpages}/cache-status.html[`cache status`], {manpages}/cache-target.html[`cache target`]
+* {manpages}/cluster-diagnostics-report.html[`cluster diagnostics-report`], {manpages}/cluster-generate.html[`cluster generate`], {manpages}/cluster-info.html[`cluster info`], {manpages}/cluster-metrics.html[`cluster metrics`], {manpages}/cluster-standby-join.html[`cluster standby-join`], {manpages}/cluster-standby-pause.html[`cluster standby-pause`], {manpages}/cluster-standby-resume.html[`cluster standby-resume`], {manpages}/cluster-standby-status.html[`cluster standby-status`], {manpages}/cluster-status.html[`cluster status`], {manpages}/cluster-stop.html[`cluster stop`]
+* {manpages}/data-source-add.html[`data-source add`], {manpages}/data-source-list.html[`data-source list`], {manpages}/data-source-online.html[`data-source online`], {manpages}/data-source-options.html[`data-source options`], {manpages}/data-source-refresh-counts.html[`data-source refresh-counts`], {manpages}/data-source-refresh-metadata.html[`data-source refresh-metadata`], {manpages}/data-source-remove.html[`data-source remove`], {manpages}/data-source-share.html[`data-source share`]
+* {manpages}/db-backup.html[`db backup`], {manpages}/db-create.html[`db create`], {manpages}/db-drop.html[`db drop`], {manpages}/db-list.html[`db list`], {manpages}/db-offline.html[`db offline`], {manpages}/db-online.html[`db online`], {manpages}/db-optimize.html[`db optimize`], {manpages}/db-repair.html[`db repair`], {manpages}/db-restore.html[`db restore`], {manpages}/db-status.html[`db status`], {manpages}/db-verify.html[`db verify`]
+* {manpages}/diagnostics-report.html[`diagnostics report`]
+* {manpages}/encryption-change-password.html[`encryption change-password`], {manpages}/encryption-disable.html[`encryption disable`], {manpages}/encryption-list-keys.html[`encryption list-keys`], {manpages}/encryption-new-key.html[`encryption new-key`], {manpages}/encryption-remove-password.html[`encryption remove-password`], {manpages}/encryption-set-password.html[`encryption set-password`]
+* {manpages}/function-add.html[`function add`], {manpages}/function-list.html[`function list`], {manpages}/function-remove.html[`function remove`]
+* {manpages}/icv-add.html[`icv add`], {manpages}/icv-drop.html[`icv drop`], {manpages}/icv-remove.html[`icv remove`]
+* {manpages}/license-info.html[`license info`], {manpages}/license-request.html[`license request`]
+* {manpages}/log-print.html[`log print`]
+* {manpages}/metadata-get.html[`metadata get`], {manpages}/metadata-set.html[`metadata set`]
+* {manpages}/property-get.html[`property get`], {manpages}/property-set.html[`property set`]
+* {manpages}/query-kill.html[`query kill`], {manpages}/query-list.html[`query list`], {manpages}/query-status.html[`query status`]
+* {manpages}/rocks-ldb.html[`rocks ldb`], {manpages}/rocks-sst_dump.html[`rocks sst_dump`]
+* {manpages}/role-add.html[`role add`], {manpages}/role-grant.html[`role grant`], {manpages}/role-list.html[`role list`], {manpages}/role-permission.html[`role permission`], {manpages}/role-remove.html[`role remove`], {manpages}/role-revoke.html[`role revoke`]
+* {manpages}/server-backup.html[`server backup`], {manpages}/server-metrics.html[`server metrics`], {manpages}/server-migrate.html[`server migrate`], {manpages}/server-profile.html[`server profile`], {manpages}/server-restore.html[`server restore`], {manpages}/server-start.html[`server start`], {manpages}/server-status.html[`server status`], {manpages}/server-stop.html[`server stop`]
+* {manpages}/stored-add.html[`stored add`], {manpages}/stored-export.html[`stored export`], {manpages}/stored-import.html[`stored import`], {manpages}/stored-list.html[`stored list`], {manpages}/stored-remove.html[`stored remove`]
+* {manpages}/user-add.html[`user add`], {manpages}/user-addrole.html[`user addrole`], {manpages}/user-disable.html[`user disable`], {manpages}/user-enable.html[`user enable`], {manpages}/user-grant.html[`user grant`], {manpages}/user-list.html[`user list`], {manpages}/user-passwd.html[`user passwd`], {manpages}/user-permission.html[`user permission`], {manpages}/user-remove.html[`user remove`], {manpages}/user-removerole.html[`user removerole`], {manpages}/user-revoke.html[`user revoke`]
+* {manpages}/virtual-add.html[`virtual add`], {manpages}/virtual-import.html[`virtual import`], {manpages}/virtual-list.html[`virtual list`], {manpages}/virtual-mappings.html[`virtual mappings`], {manpages}/virtual-online.html[`virtual online`], {manpages}/virtual-options.html[`virtual options`], {manpages}/virtual-remove.html[`virtual remove`], {manpages}/virtual-source_metadata.html[`virtual source_metadata`]
+* {manpages}/zk-clear.html[`zk clear`], {manpages}/zk-info.html[`zk info`]

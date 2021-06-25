@@ -1,0 +1,197 @@
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    body { margin: 50px; }
+</style>
+<body>
+<hr/>
+<h1 class="text-info">stardog reasoning schema Manual Page
+<hr/>
+<h1 class="text-info">NAME</h1>
+<br/>
+<div class="row"><div class="span8 offset1">stardog reasoning schema &mdash;Management of reasoning schemas.</div>
+</div>
+<br/>
+<h1 class="text-info">SYNOPSIS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+stardog [ --krb5 ] [ --krb5-disable-rdns ] reasoning  schema [ {-a | --add} &lt;schemaName&gt; ] [ {-f | --format} &lt;resultFormat&gt; ] [ {-g | --graphs | --named-graphs} &lt;named graph(s)&gt;... ] [ {-l | --list} ] [ --no-color ] [ {-p | --passwd} &lt;password&gt; ] [ {-P | --ask-password} ] [ {-r | --remove} &lt;schemaName&gt; ] [ --run-as &lt;username&gt; ] [ {-s | --show} &lt;schemaName&gt; ] [ {-u | --username} &lt;username&gt; ] [ {-v | --verbose} ] [--] &lt;database&gt;</div>
+</div>
+<br/>
+<h1 class="text-info">OPTIONS</h1>
+<br/>
+<div class="row">
+<div class="span8 offset1">
+-a &lt;schemaName&gt;, --add &lt;schemaName&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Adds a new reasoning schema with the given name. The named graphs for the schema should be provided with the {-g, --grsphs} option. If the schema already exists its named graph setting wil lbe overridden.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-f &lt;resultFormat&gt;, --format &lt;resultFormat&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Result format for output [NTRIPLES, RDF/XML, TURTLE, PRETTY_TURTLE, TRIG, TRIX, N3, NQUADS, JSONLD]</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-g &lt;named graph(s)&gt;, --graphs &lt;named graph(s)&gt;, --named-graphs &lt;named graph(s)&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Named graph(s) to associate with a schema. Only valid with --add option</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--krb5</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Use the Kerberos environment.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--krb5-disable-rdns</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Disable reverse DNS lookup for Kerberos clients.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-l, --list</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Lists the names of all schemas in this database</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--no-color</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Do not use ANSI syntax highlighting in the output. Note that syntax highlighting is used only when an output format is not provided so this option is not needed if you specify an output format.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-p &lt;password&gt;, --passwd &lt;password&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Password.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-P, --ask-password</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Prompt for password.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-r &lt;schemaName&gt;, --remove &lt;schemaName&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Removes the reasoning schema with the given name.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--run-as &lt;username&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+User to impersonate when running the command</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-s &lt;schemaName&gt;, --show &lt;schemaName&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Exports the contents of the specified schema with the given name.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-u &lt;username&gt;, --username &lt;username&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+User name.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+-v, --verbose</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+Flag that can cause more detailed information to be printed such as errors and status. Exact output depends upon the command and options used.</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+--
+</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+This option can be used to separate command-line options from the list of argument, (useful when arguments might be mistaken for command-line options
+</div>
+</div>
+<div class="row">
+<div class="span8 offset1">
+&lt;database&gt;</div>
+</div>
+<div class="row">
+<div class="span8 offset2">
+The name of the database or the full connection string of the database to connect to. If only the name is provided, the default server URL will be pre-pended to the name of the database in order to construct the connection string. Connection parameters such as ';reasoning=true' can be included in the provided database name. Connection parameters specified like this can be overridden by specific options on the command. The default server URL will be read from the JVM argument 'stardog.default.cli.server'. If the JVM argument is not set, the default value 'http://localhost:5820' is used. If the server URL has no explicit port value, the default port value '5820' is used.  To use a secure connection, you should specify the full connection string and postfix 's' to the protocol, e.g. https.</div>
+</div>
+<br/>
+<h1 class="text-info">EXAMPLES</h1>
+<br/>
+<div class="row">
+<div class="span12 offset1">
+<p>
+Export the default schema of the database in human-friendly format:</p>
+<pre>
+    $ stardog reasoning schema myDB</pre>
+<p>
+Export the default schema of the database without syntax highlighting:</p>
+<pre>
+    $ stardog reasoning schema --no-color myDB</pre>
+<p>
+Export the default schema of the database in turtle format:</p>
+<pre>
+    $ stardog reasoning schema -f turtle myDB</pre>
+<p>
+Export the given named schema:</p>
+<pre>
+    $ stardog reasoning schema --show mySchema myDB</pre>
+<p>
+Set the named graphs for the default schema:</p>
+<pre>
+    $ stardog reasoning schema --add default --graphs :myGraph http://example.com/anotherGraph -- myDB</pre>
+<p>
+Add a new named schema to the database for the given named graphs:</p>
+<pre>
+    $ stardog reasoning schema --add mySchema --graphs :myGraph http://example.com/anotherGraph -- myDB</pre>
+<p>
+Remove a named schema from the database:</p>
+<pre>
+    $ stardog reasoning schema --remove mySchema myDB :myGraph</pre>
+<p>
+List all the named schemas:</p>
+<pre>
+    $ stardog reasoning schema --list myDB</pre>
+</div>
+</div>
+</body>
+</html>
+
