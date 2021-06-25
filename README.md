@@ -19,10 +19,15 @@
 ```
     # (the application assumes a database called "interdrugs")
     export STARDOG_HOME=/opt/Protege/projects/FinalProject/stardog
-    stardog/bin/stardog-admin db create -n interdrugs ontologies/interactingDrugs.ttl ontologies/interactingDrugs-inferences.ttl
+    stardog/bin/stardog-admin db create -n interdrugs ontologies/interactingDrugs.ttl
     stardog/bin/stardog-admin server start --disable-security
     
     
     cd src
     python server.py
+```
+
+Drop DB if it exists:
+```
+    stardog/bin/stardog-admin db drop interdrugs 
 ```

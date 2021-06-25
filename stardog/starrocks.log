@@ -123,3 +123,115 @@
 [INFO ][2021/06/25 22:59:50:110][starrocks/main/native/src/kvjni.cpp:363][140507498895104] Memory before cache cleanup: 603336704
 [INFO ][2021/06/25 22:59:50:110][starrocks/main/native/src/kvjni.cpp:369][140507498895104] Calling malloc_trim: 
 [INFO ][2021/06/25 22:59:50:110][starrocks/main/native/src/kvjni.cpp:375][140507498895104] Memory after cache cleanup: 603336704
+[DEBUG][2021/06/26 02:10:54:690][starrocks/main/native/src/dbmanagerjni.cpp:62][140507492579072] Drop database
+[DEBUG][2021/06/26 02:10:54:730][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.equalityindex_54
+[DEBUG][2021/06/26 02:10:54:730][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.equalitytx_54
+[DEBUG][2021/06/26 02:10:54:730][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.stattx_54
+[DEBUG][2021/06/26 02:10:54:730][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.dictionary_54
+[DEBUG][2021/06/26 02:10:54:731][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.TERNARY_54
+[DEBUG][2021/06/26 02:10:54:732][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.value_54
+[DEBUG][2021/06/26 02:10:54:732][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.statcharset_54
+[DEBUG][2021/06/26 02:10:54:732][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.statpropset_54
+[DEBUG][2021/06/26 02:10:54:732][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.statobjset_54
+[DEBUG][2021/06/26 02:11:14:715][starrocks/main/native/src/db_manager.cpp:40][140507496789760] Creating database with name=[interdrugs] and options {compression_type: 4 walEnabled: 1}
+[DEBUG][2021/06/26 02:11:14:849][starrocks/main/native/src/dbmanagerjni.cpp:87][140507496789760] Get the Dictionary column family
+[DEBUG][2021/06/26 02:11:14:849][starrocks/main/native/src/dbmanagerjni.cpp:102][140507496789760] Get the Value column family
+[DEBUG][2021/06/26 02:11:14:849][starrocks/main/native/src/dbmanagerjni.cpp:117][140507496789760] Get the StatCharSet column family
+[DEBUG][2021/06/26 02:11:14:849][starrocks/main/native/src/dbmanagerjni.cpp:132][140507496789760] Get the StatPropSet column family
+[DEBUG][2021/06/26 02:11:14:849][starrocks/main/native/src/dbmanagerjni.cpp:147][140507496789760] Get the StatObjSet column family
+[DEBUG][2021/06/26 02:11:14:849][starrocks/main/native/src/dbmanagerjni.cpp:162][140507496789760] Get the StatTx column family
+[DEBUG][2021/06/26 02:11:14:849][starrocks/main/native/src/dbmanagerjni.cpp:177][140507496789760] Get the EqualityTx column family
+[DEBUG][2021/06/26 02:11:14:849][starrocks/main/native/src/dbmanagerjni.cpp:192][140507496789760] Get the EqualityIndex column family
+[INFO ][2021/06/26 02:11:14:854][starrocks/main/native/src/kvjni.cpp:363][140507496789760] Memory before cache cleanup: 1394307072
+[INFO ][2021/06/26 02:11:14:855][starrocks/main/native/src/kvjni.cpp:369][140507496789760] Calling malloc_trim: 
+[INFO ][2021/06/26 02:11:14:859][starrocks/main/native/src/kvjni.cpp:375][140507496789760] Memory after cache cleanup: 1435209728
+[INFO ][2021/06/26 02:11:15:943][starrocks/main/native/src/kvjni.cpp:363][140507496789760] Memory before cache cleanup: 1418444800
+[INFO ][2021/06/26 02:11:15:943][starrocks/main/native/src/kvjni.cpp:369][140507496789760] Calling malloc_trim: 
+[INFO ][2021/06/26 02:11:15:944][starrocks/main/native/src/kvjni.cpp:375][140507496789760] Memory after cache cleanup: 1420734464
+[INFO ][2021/06/26 02:11:15:944][starrocks/main/native/src/kvjni.cpp:363][140507496789760] Memory before cache cleanup: 1420734464
+[INFO ][2021/06/26 02:11:15:944][starrocks/main/native/src/kvjni.cpp:369][140507496789760] Calling malloc_trim: 
+[INFO ][2021/06/26 02:11:15:944][starrocks/main/native/src/kvjni.cpp:375][140507496789760] Memory after cache cleanup: 1420734464
+[DEBUG][2021/06/26 02:16:04:542][starrocks/main/native/src/dbmanagerjni.cpp:62][140507496789760] Drop database
+[DEBUG][2021/06/26 02:16:04:592][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.equalityindex_156
+[DEBUG][2021/06/26 02:16:04:592][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.equalitytx_156
+[DEBUG][2021/06/26 02:16:04:592][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.stattx_156
+[DEBUG][2021/06/26 02:16:04:592][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.dictionary_156
+[DEBUG][2021/06/26 02:16:04:593][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.TERNARY_156
+[DEBUG][2021/06/26 02:16:04:594][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.value_156
+[DEBUG][2021/06/26 02:16:04:594][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.statcharset_156
+[DEBUG][2021/06/26 02:16:04:595][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.statpropset_156
+[DEBUG][2021/06/26 02:16:04:595][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.statobjset_156
+[DEBUG][2021/06/26 02:16:11:338][starrocks/main/native/src/db_manager.cpp:40][140507445286656] Creating database with name=[interdrugs] and options {compression_type: 4 walEnabled: 1}
+[DEBUG][2021/06/26 02:16:11:493][starrocks/main/native/src/dbmanagerjni.cpp:87][140507445286656] Get the Dictionary column family
+[DEBUG][2021/06/26 02:16:11:493][starrocks/main/native/src/dbmanagerjni.cpp:102][140507445286656] Get the Value column family
+[DEBUG][2021/06/26 02:16:11:493][starrocks/main/native/src/dbmanagerjni.cpp:117][140507445286656] Get the StatCharSet column family
+[DEBUG][2021/06/26 02:16:11:493][starrocks/main/native/src/dbmanagerjni.cpp:132][140507445286656] Get the StatPropSet column family
+[DEBUG][2021/06/26 02:16:11:493][starrocks/main/native/src/dbmanagerjni.cpp:147][140507445286656] Get the StatObjSet column family
+[DEBUG][2021/06/26 02:16:11:493][starrocks/main/native/src/dbmanagerjni.cpp:162][140507445286656] Get the StatTx column family
+[DEBUG][2021/06/26 02:16:11:493][starrocks/main/native/src/dbmanagerjni.cpp:177][140507445286656] Get the EqualityTx column family
+[DEBUG][2021/06/26 02:16:11:493][starrocks/main/native/src/dbmanagerjni.cpp:192][140507445286656] Get the EqualityIndex column family
+[INFO ][2021/06/26 02:16:11:501][starrocks/main/native/src/kvjni.cpp:363][140507445286656] Memory before cache cleanup: 1176477696
+[INFO ][2021/06/26 02:16:11:501][starrocks/main/native/src/kvjni.cpp:369][140507445286656] Calling malloc_trim: 
+[INFO ][2021/06/26 02:16:11:510][starrocks/main/native/src/kvjni.cpp:375][140507445286656] Memory after cache cleanup: 1233305600
+[INFO ][2021/06/26 02:16:12:787][starrocks/main/native/src/kvjni.cpp:363][140507445286656] Memory before cache cleanup: 1178353664
+[INFO ][2021/06/26 02:16:12:787][starrocks/main/native/src/kvjni.cpp:369][140507445286656] Calling malloc_trim: 
+[INFO ][2021/06/26 02:16:12:788][starrocks/main/native/src/kvjni.cpp:375][140507445286656] Memory after cache cleanup: 1186455552
+[INFO ][2021/06/26 02:16:12:789][starrocks/main/native/src/kvjni.cpp:363][140507445286656] Memory before cache cleanup: 1186455552
+[INFO ][2021/06/26 02:16:12:789][starrocks/main/native/src/kvjni.cpp:369][140507445286656] Calling malloc_trim: 
+[INFO ][2021/06/26 02:16:12:789][starrocks/main/native/src/kvjni.cpp:375][140507445286656] Memory after cache cleanup: 1186455552
+[DEBUG][2021/06/26 02:24:50:371][starrocks/main/native/src/dbmanagerjni.cpp:62][140507492579072] Drop database
+[DEBUG][2021/06/26 02:24:50:861][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.equalityindex_190
+[DEBUG][2021/06/26 02:24:50:861][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.equalitytx_190
+[DEBUG][2021/06/26 02:24:50:861][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.stattx_190
+[DEBUG][2021/06/26 02:24:50:861][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.dictionary_190
+[DEBUG][2021/06/26 02:24:50:862][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.TERNARY_190
+[DEBUG][2021/06/26 02:24:50:862][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.value_190
+[DEBUG][2021/06/26 02:24:50:862][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.statcharset_190
+[DEBUG][2021/06/26 02:24:50:862][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.statpropset_190
+[DEBUG][2021/06/26 02:24:50:862][starrocks/main/native/src/database.cpp:72][140507492579072] Destroying the CF in ~Database interdrugs.statobjset_190
+[DEBUG][2021/06/26 02:24:56:156][starrocks/main/native/src/db_manager.cpp:40][140507496789760] Creating database with name=[interdrugs] and options {compression_type: 4 walEnabled: 1}
+[DEBUG][2021/06/26 02:24:56:284][starrocks/main/native/src/dbmanagerjni.cpp:87][140507496789760] Get the Dictionary column family
+[DEBUG][2021/06/26 02:24:56:284][starrocks/main/native/src/dbmanagerjni.cpp:102][140507496789760] Get the Value column family
+[DEBUG][2021/06/26 02:24:56:284][starrocks/main/native/src/dbmanagerjni.cpp:117][140507496789760] Get the StatCharSet column family
+[DEBUG][2021/06/26 02:24:56:284][starrocks/main/native/src/dbmanagerjni.cpp:132][140507496789760] Get the StatPropSet column family
+[DEBUG][2021/06/26 02:24:56:284][starrocks/main/native/src/dbmanagerjni.cpp:147][140507496789760] Get the StatObjSet column family
+[DEBUG][2021/06/26 02:24:56:284][starrocks/main/native/src/dbmanagerjni.cpp:162][140507496789760] Get the StatTx column family
+[DEBUG][2021/06/26 02:24:56:284][starrocks/main/native/src/dbmanagerjni.cpp:177][140507496789760] Get the EqualityTx column family
+[DEBUG][2021/06/26 02:24:56:284][starrocks/main/native/src/dbmanagerjni.cpp:192][140507496789760] Get the EqualityIndex column family
+[INFO ][2021/06/26 02:24:56:290][starrocks/main/native/src/kvjni.cpp:363][140507496789760] Memory before cache cleanup: 1325068288
+[INFO ][2021/06/26 02:24:56:290][starrocks/main/native/src/kvjni.cpp:369][140507496789760] Calling malloc_trim: 
+[INFO ][2021/06/26 02:24:56:294][starrocks/main/native/src/kvjni.cpp:375][140507496789760] Memory after cache cleanup: 1366454272
+[INFO ][2021/06/26 02:24:56:858][starrocks/main/native/src/kvjni.cpp:363][140507496789760] Memory before cache cleanup: 1354342400
+[INFO ][2021/06/26 02:24:56:858][starrocks/main/native/src/kvjni.cpp:369][140507496789760] Calling malloc_trim: 
+[INFO ][2021/06/26 02:24:56:859][starrocks/main/native/src/kvjni.cpp:375][140507496789760] Memory after cache cleanup: 1359978496
+[INFO ][2021/06/26 02:24:56:859][starrocks/main/native/src/kvjni.cpp:363][140507496789760] Memory before cache cleanup: 1359978496
+[INFO ][2021/06/26 02:24:56:859][starrocks/main/native/src/kvjni.cpp:369][140507496789760] Calling malloc_trim: 
+[INFO ][2021/06/26 02:24:56:860][starrocks/main/native/src/kvjni.cpp:375][140507496789760] Memory after cache cleanup: 1359978496
+[DEBUG][2021/06/26 02:30:08:594][starrocks/main/native/src/dbmanagerjni.cpp:62][140507496789760] Drop database
+[DEBUG][2021/06/26 02:30:08:622][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.equalityindex_218
+[DEBUG][2021/06/26 02:30:08:622][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.equalitytx_218
+[DEBUG][2021/06/26 02:30:08:622][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.stattx_218
+[DEBUG][2021/06/26 02:30:08:622][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.dictionary_218
+[DEBUG][2021/06/26 02:30:08:623][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.TERNARY_218
+[DEBUG][2021/06/26 02:30:08:623][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.value_218
+[DEBUG][2021/06/26 02:30:08:623][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.statcharset_218
+[DEBUG][2021/06/26 02:30:08:624][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.statpropset_218
+[DEBUG][2021/06/26 02:30:08:624][starrocks/main/native/src/database.cpp:72][140507496789760] Destroying the CF in ~Database interdrugs.statobjset_218
+[DEBUG][2021/06/26 02:30:13:762][starrocks/main/native/src/db_manager.cpp:40][140507445286656] Creating database with name=[interdrugs] and options {compression_type: 4 walEnabled: 1}
+[DEBUG][2021/06/26 02:30:13:935][starrocks/main/native/src/dbmanagerjni.cpp:87][140507445286656] Get the Dictionary column family
+[DEBUG][2021/06/26 02:30:13:935][starrocks/main/native/src/dbmanagerjni.cpp:102][140507445286656] Get the Value column family
+[DEBUG][2021/06/26 02:30:13:935][starrocks/main/native/src/dbmanagerjni.cpp:117][140507445286656] Get the StatCharSet column family
+[DEBUG][2021/06/26 02:30:13:935][starrocks/main/native/src/dbmanagerjni.cpp:132][140507445286656] Get the StatPropSet column family
+[DEBUG][2021/06/26 02:30:13:935][starrocks/main/native/src/dbmanagerjni.cpp:147][140507445286656] Get the StatObjSet column family
+[DEBUG][2021/06/26 02:30:13:935][starrocks/main/native/src/dbmanagerjni.cpp:162][140507445286656] Get the StatTx column family
+[DEBUG][2021/06/26 02:30:13:935][starrocks/main/native/src/dbmanagerjni.cpp:177][140507445286656] Get the EqualityTx column family
+[DEBUG][2021/06/26 02:30:13:935][starrocks/main/native/src/dbmanagerjni.cpp:192][140507445286656] Get the EqualityIndex column family
+[INFO ][2021/06/26 02:30:13:940][starrocks/main/native/src/kvjni.cpp:363][140507445286656] Memory before cache cleanup: 1246261248
+[INFO ][2021/06/26 02:30:13:940][starrocks/main/native/src/kvjni.cpp:369][140507445286656] Calling malloc_trim: 
+[INFO ][2021/06/26 02:30:13:942][starrocks/main/native/src/kvjni.cpp:375][140507445286656] Memory after cache cleanup: 1272582144
+[INFO ][2021/06/26 02:30:14:736][starrocks/main/native/src/kvjni.cpp:363][140507445286656] Memory before cache cleanup: 1257852928
+[INFO ][2021/06/26 02:30:14:736][starrocks/main/native/src/kvjni.cpp:369][140507445286656] Calling malloc_trim: 
+[INFO ][2021/06/26 02:30:14:737][starrocks/main/native/src/kvjni.cpp:375][140507445286656] Memory after cache cleanup: 1261375488
+[INFO ][2021/06/26 02:30:14:738][starrocks/main/native/src/kvjni.cpp:363][140507445286656] Memory before cache cleanup: 1261375488
+[INFO ][2021/06/26 02:30:14:738][starrocks/main/native/src/kvjni.cpp:369][140507445286656] Calling malloc_trim: 
+[INFO ][2021/06/26 02:30:14:739][starrocks/main/native/src/kvjni.cpp:375][140507445286656] Memory after cache cleanup: 1261375488
