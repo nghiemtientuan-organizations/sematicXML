@@ -18,7 +18,7 @@
 # Run project
 ```
     # (the application assumes a database called "interdrugs")
-    export STARDOG_HOME=/opt/Protege/projects/FinalProject/stardog
+    export STARDOG_HOME=/opt/Protege/projects/sematicXML/stardog
     stardog/bin/stardog-admin db create -n interdrugs ontologies/interactingDrugs.ttl
     stardog/bin/stardog-admin server start --disable-security
     

@@ -33,3 +33,12 @@ nosetests.xml
 .project
 .pydevproject
 .idea
+stardog/data
+stardog/interdrugs
+stardog/stardog.log
+stardog/stardog.pid
+stardog/system.lock
+stardog/txn_blocks
+stardog/zookeeper.log
+stardog/starrocks.log
+stardog/system
